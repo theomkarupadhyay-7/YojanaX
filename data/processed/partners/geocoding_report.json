@@ -1,0 +1,326 @@
+{
+  "generated_at": "2026-09-06T22:31:02",
+  "total": 24,
+  "accepted": 0,
+  "review": 24,
+  "stopped_due_to_403": false,
+  "notes": [
+    "Coordinates are accepted only when the returned OSM object strongly matches the expected partner branch/office.",
+    "Generic localities and unrelated POIs are intentionally rejected.",
+    "coordinate_source identifies coordinates produced by this script."
+  ],
+  "reports": [
+    {
+      "location_id": "RRB-002-PUNE-4616",
+      "location_name": "Medankarwadi",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Trimurti Appartment, Shop No. 3,4,5, Balajinagar, Medankarwadi-Chakan, Taluka Khed, Dist. Pune - 410501, India",
+        "Maharashtra Gramin Bank, Medankarwadi, Medankarwadi, 410501, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-PUNE-4617",
+      "location_name": "Koyali",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Plot No. 1169, At. and Po. Koyali Tarfe Chakan, Taluka Khed, Dist. Pune - 410501, India",
+        "Maharashtra Gramin Bank, Koyali, Koyali, 410501, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-PUNE-4618",
+      "location_name": "Narhe",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Shop No. 101, Varad Vinayak Complex, Shree Control Chowk, Narhe, Tal-Haveli, Pune - 411041, India",
+        "Maharashtra Gramin Bank, Narhe, Narhe, 411041, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-PUNE-4620",
+      "location_name": "Bhugaon",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Survey No. 530/1, Near Hira Garden, Paud Road, At Po. Bhugaon, Taluka Mulshi, Dist. Pune - 412115, India",
+        "Maharashtra Gramin Bank, Bhugaon, Bhugaon, 412115, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5601",
+      "location_name": "Vrindavan",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Building No. 22/A, Vrindavan Society, Thane (West) - 400601, India",
+        "Maharashtra Gramin Bank, Vrindavan, Thane, 400601, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5602",
+      "location_name": "Belavali",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Shivshanti Complex, Ground Floor, F Wing, Near Uddan Pool, Badlapur-Ambernath Road, Badlapur (West), Dist-Thane - 421503, India",
+        "Maharashtra Gramin Bank, Belavali, Badlapur, 421503, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5603",
+      "location_name": "Tokawade",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Pawar Building, Bazar Peth, Tal-Murbad, Dist-Thane - 421401, India",
+        "Maharashtra Gramin Bank, Tokawade, Tokawade, 421401, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5620",
+      "location_name": "Khadavli",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Ram Manzil, Falegaon Road, Khadavali (E), At & Po. Khadavali, Tal-Kalyan, Dist-Thane - 421605, India",
+        "Maharashtra Gramin Bank, Khadavli, Khadavli, 421605, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5630",
+      "location_name": "Khadakpada Kalyan",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, C/06, Madhavsrushti, Near Godrej Hill, Khadakpada, Kalyan (West), Dist-Thane - 421301, India",
+        "Maharashtra Gramin Bank, Khadakpada Kalyan, Kalyan, 421301, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-THANE-5632",
+      "location_name": "Ghansoli",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, House No. 2203 & 2204, Datta Niwas, Near Meena Hospital, Main Road, Ghansoli, Navi Mumbai, Dist-Thane - 400701, India",
+        "Maharashtra Gramin Bank, Ghansoli, Navi Mumbai, 400701, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-NAGPUR-6701",
+      "location_name": "Hudkeswar",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Chandrakiran Nagar, Gruh Nirman Society, Old Hudkeshwar Naka, Hudkeshwar Road, Nagpur - 440034, India",
+        "Maharashtra Gramin Bank, Hudkeswar, Nagpur, 440034, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-NAGPUR-6704",
+      "location_name": "Hingana",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Shop No. 2 & 3, Tulsi Complex, Bansi Nagar, Digdoh, Hingana Road, Nagpur - 440013, India",
+        "Maharashtra Gramin Bank, Hingana, Nagpur, 440013, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-NAGPUR-6705",
+      "location_name": "Khamla",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Kulkarni Bhavan, Main Road, Khamla, Nagpur - 440025, India",
+        "Maharashtra Gramin Bank, Khamla, Nagpur, 440025, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-NAGPUR-6706",
+      "location_name": "Pardi",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Pragati Apartment, Telipura, Bhandara Road, Pardi, Tal+Distt: Nagpur - 440035, India",
+        "Maharashtra Gramin Bank, Pardi, Nagpur, 440035, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "RRB-002-NAGPUR-6711",
+      "location_name": "Service Branch Nagpur",
+      "partner_id": "RRB-002",
+      "partner_name": "Maharashtra Gramin Bank",
+      "status": "review",
+      "queries": [
+        "Maharashtra Gramin Bank, Chandrakiran Nagar, Gruh Nirman Society, Old Hudkeshwar Naka, Hudkeshwar Road, Nagpur - 440034, India",
+        "Maharashtra Gramin Bank, Service Branch Nagpur, Nagpur, 440034, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-MUMBAI-0002",
+      "location_name": "Fort Branch",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, 45/47 Bombay Samachar Marg, Fort, Mumbai - 400023, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Fort Branch, Mumbai, 400023, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-MUMBAI-0016",
+      "location_name": "Ranade Road Branch",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Samrudhi Heights, B Wing, D.L. Vaidya Road, Dadar, Mumbai - 400028, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Ranade Road Branch, Mumbai, 400028, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-MUMBAI-0082",
+      "location_name": "Mumbai Goregaon West",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, AB Koregaonkar School Complex, Aarey Road, Goregaon West, Mumbai - 400062, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Mumbai Goregaon West, Mumbai, 400062, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-MUMBAI-0089",
+      "location_name": "Mumbai Chembur",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Mahabank Bldg 71-E, Dayanand Saraswati Road, Chembur, Mumbai - 400071, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Mumbai Chembur, Mumbai, 400071, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-NAGPUR-0005",
+      "location_name": "Sitabuldi",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Mahabank Bldg, 172 Abhyankar Rd, Sitabuldi, Nagpur, Munje Chowk, Nagpur - 440012, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Sitabuldi, Nagpur, 440012, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-NAGPUR-0107",
+      "location_name": "Mahal",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Shirpurkar Bhawan, 1st Floor, Kelibag Rd, Mahal, Nagpur - 440032, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Mahal, Nagpur, 440032, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-NAGPUR-0452",
+      "location_name": "Sadar Bazar",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Gani Charitable Trust Anjuman Complex Bldg, Sadar Bazar, Nagpur - 440001, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Sadar Bazar, Nagpur, 440001, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-NASHIK-0834",
+      "location_name": "Ambad InduEstate Branch",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Plot No. 15 & 16, Opp. Nikita Mangal Karyalaya, Near Ambad Police Station, Ashwin Nagar, Nashik - 422009, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Ambad InduEstate Branch, Nashik, 422009, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    },
+    {
+      "location_id": "PSB-008-NASHIK-0014",
+      "location_name": "Nasik City Branch",
+      "partner_id": "PSB-008",
+      "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+      "status": "review",
+      "queries": [
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Janamangal, Nasik - 422001, India",
+        "Bank of Maharashtra Head office ‘Lok mangal’ 1501, Nasik City Branch, Nashik, 422001, India"
+      ],
+      "candidates": [],
+      "reason": "No candidate passed the strict branch-identity checks. Coordinates remain null."
+    }
+  ]
+}

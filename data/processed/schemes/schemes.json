@@ -1,0 +1,274 @@
+[
+  {
+    "scheme_id": "MFS",
+    "scheme_name": "Micro Finance Scheme",
+    "scheme_category": "credit",
+    "target_type": "entrepreneur",
+    "project_cost": {
+      "min_inr": 0,
+      "max_inr": 140000
+    },
+    "loan_amount": {
+      "max_percentage": 90,
+      "max_inr": 125000
+    },
+    "interest_rate": {
+      "type": "fixed",
+      "value_percent": 6.5
+    },
+    "repayment": {
+      "period_years": 3,
+      "moratorium_months": 3,
+      "installment_frequency": "quarterly"
+    },
+    "channel_partner_types": [],
+    "eligibility": {
+      "sc_required": true,
+      "annual_family_income_max_inr": 500000,
+      "income_criterion_applies": true,
+      "notes": []
+    },
+    "documents": [],
+    "application_process": {
+      "direct_application_to_nsfdc": false,
+      "channel_partner_required": true
+    },
+    "provenance": {
+      "organization": "NSFDC",
+      "source_name": "NSFDC Loans / Credit Schemes",
+      "source_url": "https://nsfdc.nic.in/scheme",
+      "retrieved_at": "2026-09-04",
+      "verification_status": "verified_seed"
+    }
+  },
+  {
+    "scheme_id": "TERM_LOAN",
+    "scheme_name": "Term Loan",
+    "scheme_category": "credit",
+    "target_type": "entrepreneur",
+    "project_cost": {
+      "min_inr_exclusive": 140000,
+      "max_inr": 5000000
+    },
+    "loan_amount": {
+      "max_percentage": 90,
+      "max_inr": 4500000
+    },
+    "interest_rate": {
+      "type": "fixed",
+      "value_percent": 8.0
+    },
+    "repayment": {
+      "period_years": 7,
+      "moratorium_months": 6,
+      "special_moratorium": {
+        "plantation_or_construction_months": 12
+      },
+      "installment_frequency": "quarterly"
+    },
+    "channel_partner_types": [],
+    "eligibility": {
+      "sc_required": true,
+      "annual_family_income_max_inr": 500000,
+      "income_criterion_applies": true,
+      "notes": []
+    },
+    "documents": [],
+    "application_process": {
+      "direct_application_to_nsfdc": false,
+      "channel_partner_required": true
+    },
+    "provenance": {
+      "organization": "NSFDC",
+      "source_name": "NSFDC Loans / Credit Schemes",
+      "source_url": "https://nsfdc.nic.in/scheme",
+      "retrieved_at": "2026-09-04",
+      "verification_status": "verified_seed"
+    }
+  },
+  {
+    "scheme_id": "AMY",
+    "scheme_name": "Aajeevika Micro-Finance Yojana",
+    "scheme_category": "credit",
+    "target_type": "entrepreneur",
+    "project_cost": {
+      "min_inr": 0,
+      "max_inr": 140000
+    },
+    "loan_amount": {
+      "max_percentage": 90,
+      "max_inr": 125000
+    },
+    "interest_rate": {
+      "type": "fixed",
+      "value_percent": 15.0
+    },
+    "repayment": {
+      "period_years": 3,
+      "moratorium_months": 3,
+      "installment_frequency": "quarterly"
+    },
+    "channel_partner_types": [
+      "NBFC-MFI"
+    ],
+    "eligibility": {
+      "sc_required": true,
+      "annual_family_income_max_inr": 500000,
+      "income_criterion_applies": true,
+      "notes": []
+    },
+    "documents": [],
+    "application_process": {
+      "direct_application_to_nsfdc": false,
+      "channel_partner_required": true
+    },
+    "provenance": {
+      "organization": "NSFDC",
+      "source_name": "NSFDC Loans / Credit Schemes",
+      "source_url": "https://nsfdc.nic.in/scheme",
+      "retrieved_at": "2026-09-04",
+      "verification_status": "verified_seed"
+    }
+  },
+  {
+    "scheme_id": "UNY",
+    "scheme_name": "Udyam Nidhi Yojana",
+    "scheme_category": "credit",
+    "target_type": "entrepreneur",
+    "project_cost": {
+      "min_inr": 0,
+      "max_inr": 500000
+    },
+    "loan_amount": {
+      "max_inr": 450000
+    },
+    "interest_rate": {
+      "type": "partner_dependent",
+      "rates": [
+        {
+          "channel_partner_type": "Co-operative Bank",
+          "value_percent": 13.0
+        },
+        {
+          "channel_partner_type": "Cooperative Society",
+          "value_percent": 13.0
+        },
+        {
+          "channel_partner_type": "Small Finance Bank",
+          "value_percent": 15.0
+        }
+      ]
+    },
+    "repayment": {
+      "period_years": 5,
+      "moratorium_months": 3,
+      "installment_frequency": [
+        "quarterly",
+        "half_yearly"
+      ]
+    },
+    "channel_partner_types": [
+      "Co-operative Bank",
+      "Cooperative Society",
+      "Small Finance Bank"
+    ],
+    "eligibility": {
+      "sc_required": true,
+      "annual_family_income_max_inr": 500000,
+      "income_criterion_applies": true,
+      "notes": []
+    },
+    "documents": [],
+    "application_process": {
+      "direct_application_to_nsfdc": false,
+      "channel_partner_required": true
+    },
+    "provenance": {
+      "organization": "NSFDC",
+      "source_name": "NSFDC Loans / Credit Schemes",
+      "source_url": "https://nsfdc.nic.in/scheme",
+      "retrieved_at": "2026-09-04",
+      "verification_status": "verified_seed"
+    }
+  },
+  {
+    "scheme_id": "ELS",
+    "scheme_name": "Educational Loan Scheme",
+    "scheme_category": "education",
+    "target_type": "student",
+    "loan_amount": {
+      "max_percentage": 90,
+      "max_inr": 4000000
+    },
+    "interest_rate": {
+      "type": "fixed",
+      "value_percent": 6.5
+    },
+    "repayment": {
+      "period_years": 12,
+      "moratorium_months": null,
+      "moratorium_description": "Course period + 1 year where repayment has not started; up to 6 months where the loan has been disbursed and repayment has started.",
+      "installment_frequency": "as per repayment schedule"
+    },
+    "channel_partner_types": [],
+    "eligibility": {
+      "sc_required": true,
+      "annual_family_income_max_inr": 500000,
+      "income_criterion_applies": true,
+      "notes": [
+        "Regular full-time professional or technical courses are eligible.",
+        "Courses must be recognized and approved by the Government of India in India or abroad."
+      ],
+      "education": {
+        "full_time_required": true,
+        "recognized_institution_required": true,
+        "recognized_course_required": true,
+        "allowed_course_types": [
+          "Engineering",
+          "Architecture",
+          "Medical",
+          "Biotechnology",
+          "Microbiology",
+          "Clinical Technology",
+          "Pharmacy",
+          "Dental",
+          "Physiotherapy",
+          "Pathology",
+          "Nursing",
+          "Information Technology",
+          "Management",
+          "Hotel Management & Catering Technology",
+          "Law",
+          "Education",
+          "Physical Education",
+          "Journalism & Mass Communication",
+          "Geriatric Care",
+          "Midwifery",
+          "Laboratory Technician",
+          "CA",
+          "ICWA",
+          "Cost Accountancy",
+          "CS",
+          "Actuarial Sciences",
+          "AMIE",
+          "Institute of Electronics & Telecommunication",
+          "Doctoral Studies",
+          "M.Phil",
+          "PhD"
+        ]
+      }
+    },
+    "documents": [],
+    "application_process": {
+      "direct_application_to_nsfdc": false,
+      "channel_partner_required": true
+    },
+    "provenance": {
+      "organization": "NSFDC",
+      "source_name": "NSFDC Loans / Credit Schemes",
+      "source_url": "https://nsfdc.nic.in/scheme",
+      "retrieved_at": "2026-09-04",
+      "verification_status": "verified_seed"
+    }
+  }
+]

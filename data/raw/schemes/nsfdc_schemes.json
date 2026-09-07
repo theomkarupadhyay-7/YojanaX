@@ -1,0 +1,74 @@
+[
+    {
+        "scheme_id": null,
+        "scheme_name": "1 Micro Finance Scheme (MFS)",
+        "description": "NSFDC provides Micro Credit Finance for units costing up to ₹ 1.40 lakh . The salient features of the scheme are as follows:",
+        "raw_details": [
+            "Maximum Loan Limit NSFDC provides loans up to 90% of the Project Cost with a maximum amount of up to ₹ 1.25 lakh per unit. Rate of Interest NSFDC charges 2.5% from the SCAs/CAs, which in turn shall charge 6.5% from the Beneficiaries. Repayment Period To be repaid in quarterly instalments within a maximum period of three years from the date of disbursement, including a 3-month moratorium period."
+        ],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "2 Term Loan",
+        "description": "NSFDC provides Term Loans for units costing more than ₹ 1.40 lakh and up to ₹ 50.00 lakh . The salient features of the scheme are as follows:",
+        "raw_details": [
+            "Maximum Loan Limit NSFDC provides term loans up to 90% of the project cost, above ₹ 1.25 lakh and up to ₹ 45 lakh per unit. Rate of Interest NSFDC shall charge interest @ 4% from the SCAs / CAs, which in turn shall charge 8% from the beneficiaries. Repayment Period Repaid in quarterly instalments within seven years, including a 6-month moratorium (12 months for plantation and construction activities)."
+        ],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "3 Aajeevika Micro-Finance Yojana",
+        "description": "NSFDC provides prompt and need-based micro finance to eligible Scheduled Caste persons at reasonable interest rates through selected NBFC-MFIs to pursue small / micro business activities.",
+        "raw_details": [
+            "Maximum Loan Limit NSFDC provides loan up to 90% (i.e. up to ₹ 1.25 lakh) for projects costing up to ₹ 1.40 lakh. Rate of Interest NSFDC shall charge interest @ 5% from the NBFC-MFIs, which in turn shall charge 15% from the beneficiaries. Repayment Period To be repaid in quarterly installments of up to three years from the date of each disbursement, including a 3-month moratorium period."
+        ],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "4 Udyam Nidhi Yojana (UNY)",
+        "description": "NSFDC provides loans under Udyam Nidhi Yojana (UNY) for projects/units costing up to ₹ 5.00 lakh . Loans are provided through Cooperative Societies, Cooperative Banks, and Small Finance Banks (SFBs) to pursue small / micro activities.",
+        "raw_details": [
+            "Maximum Loan Limit NSFDC provides loans up to 90% of the project cost i.e. up to ₹ 4.50 lakh. Rate of Interest Cooperative Banks/Societies: NSFDC charges 5%, Beneficiary pays 13% . Small Finance Banks: NSFDC charges 5%, Beneficiary pays 15% . Repayment Period To be repaid in quarterly or half-yearly instalments within a maximum period of up to 5 years, including a 3-month moratorium period."
+        ],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "5 Educational Loan Scheme (ELS)",
+        "description": "Educational Loan shall be provided to eligible students for pursuing regular full-time professional / technical recognized courses approved by the Government in India or abroad.",
+        "raw_details": [
+            "Project Cost (Maximum Loan limit up to 90% of Project Cost) Interest Rate p.a. for Repayment Period Moratorium Period CAs Beneficiary Education Loan Scheme (Domestic & Abroad) Upto ₹ 40.00 Lakh or 90% of course fee, whichever is less 2.5% 6.5% Upto 12 years where repayment has not started. Upto 10 years, where loan disbursed and repayment started. Course period plus 01 year, where repayment has not started. Upto 6 months, where loan disbursed and repayment started.",
+            "Recognized Professional / Technical Courses Covered:",
+            "1. Engineering (Diploma / B.Tech / B.E / M.Tech / M.E) 2. Architecture (B.Arch / M.Arch) 3. Medical (MBBS / MD / MS) 4. Biotechnology / Microbiology / Clinical Technology 5. Pharmacy (B.Pharma / M.Pharma) 6. Dental (BDS / MDS) 7. Physiotherapy (B.Sc / M.Sc) 8. Pathology (B.Sc / M.Sc) 9. Nursing (B.Sc / M.Sc) 10. Information Technology (BCA / MCA) 11. Management (BBA / MBA) 12. Hotel Management & Catering Technology 13. Law (LLB / LLM) 14. Education (CT / NTT / B.Ed / M.Ed) 15. Physical Education (C.PEd / B.PEd / M.PEd) 16. Journalism & Mass Communication 17. Geriatric Care 18. Midwifery 19. Laboratory Technician 20. Chartered Accountancy (CA) 21. Cost Accountancy (ICWA) 22. Company Secretaryship (CS) 23. Actuarial Sciences 24. AMIE / Institute of Electronics & Telecommunication Higher Education: Doctoral Studies leading to M.Phil / PhD from recognized institutions."
+        ],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    }
+]

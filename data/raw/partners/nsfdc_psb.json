@@ -1,0 +1,68 @@
+[
+  {
+    "partner_id": "PSB-001",
+    "partner_type": "PSB",
+    "name": "Indian Overseas Bank",
+    "address": "Central Office, 763, Anna Salai, Chennai, Tamil Nadu – 600 002."
+  },
+  {
+    "partner_id": "PSB-002",
+    "partner_type": "PSB",
+    "name": "Bank of Baroda",
+    "address": "Baroda Bhavan, 7thFloor, R.C. Dutt Road, Vadodara – 390 007 (Gujarat)"
+  },
+  {
+    "partner_id": "PSB-003",
+    "partner_type": "PSB",
+    "name": "Canara Bank",
+    "address": "Head Office, 112, J.C. Road, Bengaluru – 560 002."
+  },
+  {
+    "partner_id": "PSB-004",
+    "partner_type": "PSB",
+    "name": "Punjab National Bank",
+    "address": "Plot No.-4, Sector 10, Dwarka, New Delhi – 110 075"
+  },
+  {
+    "partner_id": "PSB-005",
+    "partner_type": "PSB",
+    "name": "Punjab & Sind Bank",
+    "address": "Priority Sector Advance Department, 5thFloor, 21 Rajendra Place, New Delhi – 110 008"
+  },
+  {
+    "partner_id": "PSB-006",
+    "partner_type": "PSB",
+    "name": "Union Bank of India",
+    "address": "Rural & Agri Business Department, Central Office Union Bank Bhavan Marg,Nariman Point, Mumbai – 400"
+  },
+  {
+    "partner_id": "PSB-007",
+    "partner_type": "PSB",
+    "name": "Indian Bank Corporate Office",
+    "address": "No.254-260, Avvai Shanmungam Salai, Gowdi Mutt Road, Royapetta, Chennai – 600 014"
+  },
+  {
+    "partner_id": "PSB-008",
+    "partner_type": "PSB",
+    "name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+    "address": "Shivajinagar, Pune-411005 Maharashtra"
+  },
+  {
+    "partner_id": "PSB-009",
+    "partner_type": "PSB",
+    "name": "Bank of India",
+    "address": "Bandra Kurla Complex, Bandra (East), Mumbai- 400051"
+  },
+  {
+    "partner_id": "PSB-010",
+    "partner_type": "PSB",
+    "name": "Central bank Of India",
+    "address": "Mumbai Chandermukhi Bldg., Nariman Point, Mumbai – 400 021"
+  },
+  {
+    "partner_id": "PSB-011",
+    "partner_type": "PSB",
+    "name": "UCO Bank",
+    "address": "Kolkata No 3&4, DD Block, Sector-1, Bidhannagar, Kolkata, West Bengal-700064 "
+  }
+]

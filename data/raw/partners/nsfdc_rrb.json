@@ -1,0 +1,158 @@
+[
+  {
+    "partner_id": "RRB-001",
+    "partner_type": "RRB",
+    "name": "Bihar Gramin Bank",
+    "address": "Shri Vishnu Commercial Complex, NH-30, New Bypass, Near Bp Highway Services Petrol Pump, Asochak, Patna - 800016"
+  },
+  {
+    "partner_id": "RRB-002",
+    "partner_type": "RRB",
+    "name": "Maharashtra Gramin Bank",
+    "address": "Plot No.35, Jeewan Shri Town Centre, CIDCO, Aurangabad, Maharashtra – 431 003."
+  },
+  {
+    "partner_id": "RRB-003",
+    "partner_type": "RRB",
+    "name": "Jharkhand Gramin Bank",
+    "address": "Zila Parishad Market Complex, 3rd Floor, Kutchery Road, Ranchi- 834001, Jharkhand."
+  },
+  {
+    "partner_id": "RRB-004",
+    "partner_type": "RRB",
+    "name": "Haryana Gramin Bank",
+    "address": "Near Bajrang Bhawan, Delhi Road, Rohtak, Haryana –124 001"
+  },
+  {
+    "partner_id": "RRB-005",
+    "partner_type": "RRB",
+    "name": "Gujarat Gramin Bank",
+    "address": "Head Office, Sky Line Building, 2nd Floor, Near Shital Guest House, Bharuch - 392001, Gujarat."
+  },
+  {
+    "partner_id": "RRB-006",
+    "partner_type": "RRB",
+    "name": "Telangana Grameena Bank",
+    "address": "H.No.2-1-520, 2nd Floor, Vijaya Sri Sai Celestia, Street No.9, Shankermut Road, Nallakunta, Hyderabad, Telangana – 500044."
+  },
+  {
+    "partner_id": "RRB-007",
+    "partner_type": "RRB",
+    "name": "Rajasthan Gramin Bank",
+    "address": "Tulsi Tower, 9th B Road Sardarpura, Jodhpur – 342003 (Rajasthan)"
+  },
+  {
+    "partner_id": "RRB-008",
+    "partner_type": "RRB",
+    "name": "Uttar Pradesh Gramin Bank",
+    "address": "2nd & 3rd Floor, NBCC Commercial Complex, Vardan Khand, Gomti Nagar Extension, Lucknow–229001(Uttar Pradesh)"
+  },
+  {
+    "partner_id": "RRB-009",
+    "partner_type": "RRB",
+    "name": "Kerala Grameena Bank",
+    "address": "PB No.10, KGpB Towers, AK Road, Uphill, Malappuram,Kerala – 676505."
+  },
+  {
+    "partner_id": "RRB-010",
+    "partner_type": "RRB",
+    "name": "Uttarakhand Gramin Bank",
+    "address": "18-New Road, Dehradun, Uttarakhand."
+  },
+  {
+    "partner_id": "RRB-011",
+    "partner_type": "RRB",
+    "name": "Tripura Gramin Bank",
+    "address": "H.O. Airport Road, PO Abhaynagar, Agartala, Tripura (W) Pin – 799 005."
+  },
+  {
+    "partner_id": "RRB-012",
+    "partner_type": "RRB",
+    "name": "Karnataka Grameena Bank",
+    "address": "Head Office, CA 20, Vijayanagar IInd Stage, Musure – 570017 (Karnataka)"
+  },
+  {
+    "partner_id": "RRB-013",
+    "partner_type": "RRB",
+    "name": "Assam Gramin Bank",
+    "address": "HO, G.S. Road, Bhangagarh, Guwahati- 781 005.(Assam)"
+  },
+  {
+    "partner_id": "RRB-014",
+    "partner_type": "RRB",
+    "name": "Andhra Pradesh Grameena Bank",
+    "address": "4th Floor, Raghu Mansion, 4-1, Broadipet, Guntur -522 002 (Andhra Pradesh)"
+  },
+  {
+    "partner_id": "RRB-015",
+    "partner_type": "RRB",
+    "name": "Punjab Gramin Bank",
+    "address": "HO Jalandhar Road, Kapurthala – 144 601. (Punjab)"
+  },
+  {
+    "partner_id": "RRB-016",
+    "partner_type": "RRB",
+    "name": "Tamil Nadu Grama Bank",
+    "address": "6, Yercaud Road, Hasthasmpatti, Salem – 636007 (Tamil Nadu)"
+  },
+  {
+    "partner_id": "RRB-017",
+    "partner_type": "RRB",
+    "name": "Madhaya Pradesh Gramin Bank. C21",
+    "address": "Business Park, C21 Square opposite Hotel Radisson Blue, MR-10 Indore- 452010, Madhaya Pradesh"
+  },
+  {
+    "partner_id": "RRB-018",
+    "partner_type": "RRB",
+    "name": "Himachal Pradesh Gramin Bank",
+    "address": "Jail Road (Panjethi), PO – Talyahar Mandi 175001 (Himachal Pradesh)"
+  },
+  {
+    "partner_id": "RRB-019",
+    "partner_type": "RRB",
+    "name": "Puducherry Grama Bank",
+    "address": "No.441, Mahatma Gandhi Road, Muthialpet, Puducherry – 605 003"
+  },
+  {
+    "partner_id": "RRB-020",
+    "partner_type": "RRB",
+    "name": "West Bengal Gramin Bank Natabar Paul Road",
+    "address": "Chatterjee Para More, Tikiapara, Howrah – 711101 (WB)"
+  },
+  {
+    "partner_id": "RRB-021",
+    "partner_type": "RRB",
+    "name": "Chhattisgarh Gramin Bank",
+    "address": "Corporate Office Raipur, Plot No.-47, Sector-24, Atal Nagar, Nava Raipur-492013"
+  },
+  {
+    "partner_id": "RRB-022",
+    "partner_type": "RRB",
+    "name": "Manipur Rural Bank",
+    "address": "Keishampat, Keisham Leikai, Imphal, Manipur 795001"
+  },
+  {
+    "partner_id": "RRB-023",
+    "partner_type": "RRB",
+    "name": "Meghalaya Rural Bank",
+    "address": "M.T.C Building, 2nd Floor, Police Bazar, Shillong-793001"
+  },
+  {
+    "partner_id": "RRB-024",
+    "partner_type": "RRB",
+    "name": "J&K Grameen Bank",
+    "address": "Jammu & Kashmir Near Fruit Complex, Narwal, Jammu (J&K) -180006"
+  },
+  {
+    "partner_id": "RRB-025",
+    "partner_type": "RRB",
+    "name": "Odisha Grameen Bank",
+    "address": "Bhubaneswar. 7R25-H75, Jagamara, Sunderpada Road, Gandamuda, Pokhhariput, Bhubaneshwar -751030,Odisha"
+  },
+  {
+    "partner_id": "RRB-026",
+    "partner_type": "RRB",
+    "name": "Mizoram Rural Bank",
+    "address": "Mizoram MINECO, Khatla Aizawl - 796001."
+  }
+]

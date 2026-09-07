@@ -1,0 +1,730 @@
+[
+  {
+    "partner_id": "COOP-BANK-001",
+    "partner_name": "Shri Mahila Sewa Sahakari Bank Ltd.",
+    "partner_type": "Co-operative Bank",
+    "state": null,
+    "address": "109. Sakar-II, Opp.Town Hall, Ellisbridge, Ahmedabad- 38006",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "COOP-BANK-002",
+    "partner_name": "Konoklata mahila Urban Cooperative Bank, Assam.",
+    "partner_type": "Co-operative Bank",
+    "state": null,
+    "address": null,
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "COOP-SOC-001",
+    "partner_name": "Streenidhi",
+    "partner_type": "Cooperative Society",
+    "state": "Telangana",
+    "address": "401 & 402, 4th Floor, My Home Sarovar Plaza, Secretariat Road, Ambedkar Colony, Saifabad, Hyderabad, Telangana 500004",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "COOP-SOC-002",
+    "partner_name": "Streenidhi AP",
+    "partner_type": "Cooperative Society",
+    "state": "Andhra Pradesh",
+    "address": "2nd Floor, NTR Administrative Block, RTC Complex, Vijayawada-520013, Andhra Pradesh",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-001",
+    "partner_name": "Anik Financial Services Private Limited",
+    "partner_type": "NBFC-MFI",
+    "state": null,
+    "address": "Regd.Office: ‘Sahyadri Building” Behind Amitesh Hotel, Ambajogai Roa, Sai Naka, Latur – 413 512",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-002",
+    "partner_name": "Grameen Development & Finance Private Limited",
+    "partner_type": "NBFC-MFI",
+    "state": "Assam",
+    "address": "Dubjent, Kulshi Road, Chhaygaon, Kamrup, Assam Pin – 781 124.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-003",
+    "partner_name": "ASA International Microfinance Ltd.",
+    "partner_type": "NBFC-MFI",
+    "state": "West Bengal",
+    "address": "Kolkata Victoria Park, 4th Floor, GN-37/2, Sector-V, Salt Lake City, Kolkata – 700 091, West Bengal.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-004",
+    "partner_name": "Midland Microfin Ltd.",
+    "partner_type": "NBFC-MFI",
+    "state": "Punjab",
+    "address": "Ludhiana The Axis, Plot No.1, R.B.Badri Dass Colony, BMC Chowk, G.T.Road, Jalandhar – 144 001, Punjab.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-005",
+    "partner_name": "Satin Creditcare Network Ltdl.",
+    "partner_type": "NBFC-MFI",
+    "state": "Haryana",
+    "address": "Gurgaon Plot No.492, Udyog Vihar, Phase-III, Gurugram, Haryana – 122 016.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-006",
+    "partner_name": "Pahal Financial Services Pvt. Ltd.",
+    "partner_type": "NBFC-MFI",
+    "state": "Gujarat",
+    "address": "Ahmedabad 7th Floor, Binori B Square-2, Opp. Hathising Ni Vadi, Ambli-Iscon Road, Ahmedabad – 380 054, Gujarat",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "NBFC-MFI-007",
+    "partner_name": "Vector Finance PVT LTD RO-K7/110",
+    "partner_type": "NBFC-MFI",
+    "state": "Odisha",
+    "address": "Ground Floor, Klinga Vihar, P.S. Khandagiri, Bhubaneswar ODISHA-751029",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "OTHER-001",
+    "partner_name": "North Eastern Development Finance Corporation Ltd. (NEDFi)",
+    "partner_type": "Other Agency / SIDBI",
+    "state": "Assam",
+    "address": "Tea Auction Center, GS Rd, Sanket Vihar, Dispur, Opposite, Guwahati, Assam 781006",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "OTHER-002",
+    "partner_name": "Jharkhand Silk Textile & Handicraft Development Corporation Ltd. (JHARCRAFT)",
+    "partner_type": "Other Agency / SIDBI",
+    "state": "Jharkhand",
+    "address": "Jharcraft, DIC Campus Ratu Road Ranchi Jharkhand 834001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "OTHER-003",
+    "partner_name": "Small Industries Development Bank of India",
+    "partner_type": "Other Agency / SIDBI",
+    "state": "Uttar Pradesh",
+    "address": "SIDBI Tower, 15, Ashok Marg, Lucknow - 226001, Uttar Pradesh",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-001",
+    "partner_name": "Indian Overseas Bank",
+    "partner_type": "PSB",
+    "state": "Tamil Nadu",
+    "address": "Central Office, 763, Anna Salai, Chennai, Tamil Nadu – 600 002.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-002",
+    "partner_name": "Bank of Baroda",
+    "partner_type": "PSB",
+    "state": "Gujarat",
+    "address": "Baroda Bhavan, 7thFloor, R.C. Dutt Road, Vadodara – 390 007 (Gujarat)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-003",
+    "partner_name": "Canara Bank",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Head Office, 112, J.C. Road, Bengaluru – 560 002.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-004",
+    "partner_name": "Punjab National Bank",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Plot No.-4, Sector 10, Dwarka, New Delhi – 110 075",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-005",
+    "partner_name": "Punjab & Sind Bank",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Priority Sector Advance Department, 5thFloor, 21 Rajendra Place, New Delhi – 110 008",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-006",
+    "partner_name": "Union Bank of India",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Rural & Agri Business Department, Central Office Union Bank Bhavan Marg,Nariman Point, Mumbai – 400",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-007",
+    "partner_name": "Indian Bank Corporate Office",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "No.254-260, Avvai Shanmungam Salai, Gowdi Mutt Road, Royapetta, Chennai – 600 014",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-008",
+    "partner_name": "Bank of Maharashtra Head office ‘Lok mangal’ 1501",
+    "partner_type": "PSB",
+    "state": "Maharashtra",
+    "address": "Shivajinagar, Pune-411005 Maharashtra",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-009",
+    "partner_name": "Bank of India",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Bandra Kurla Complex, Bandra (East), Mumbai- 400051",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-010",
+    "partner_name": "Central bank Of India",
+    "partner_type": "PSB",
+    "state": null,
+    "address": "Mumbai Chandermukhi Bldg., Nariman Point, Mumbai – 400 021",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "PSB-011",
+    "partner_name": "UCO Bank",
+    "partner_type": "PSB",
+    "state": "West Bengal",
+    "address": "Kolkata No 3&4, DD Block, Sector-1, Bidhannagar, Kolkata, West Bengal-700064",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-001",
+    "partner_name": "Bihar Gramin Bank",
+    "partner_type": "RRB",
+    "state": null,
+    "address": "Shri Vishnu Commercial Complex, NH-30, New Bypass, Near Bp Highway Services Petrol Pump, Asochak, Patna - 800016",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-002",
+    "partner_name": "Maharashtra Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Maharashtra",
+    "address": "Plot No.35, Jeewan Shri Town Centre, CIDCO, Aurangabad, Maharashtra – 431 003.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-003",
+    "partner_name": "Jharkhand Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Jharkhand",
+    "address": "Zila Parishad Market Complex, 3rd Floor, Kutchery Road, Ranchi- 834001, Jharkhand.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-004",
+    "partner_name": "Haryana Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Haryana",
+    "address": "Near Bajrang Bhawan, Delhi Road, Rohtak, Haryana –124 001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-005",
+    "partner_name": "Gujarat Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Gujarat",
+    "address": "Head Office, Sky Line Building, 2nd Floor, Near Shital Guest House, Bharuch - 392001, Gujarat.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-006",
+    "partner_name": "Telangana Grameena Bank",
+    "partner_type": "RRB",
+    "state": "Telangana",
+    "address": "H.No.2-1-520, 2nd Floor, Vijaya Sri Sai Celestia, Street No.9, Shankermut Road, Nallakunta, Hyderabad, Telangana – 500044.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-007",
+    "partner_name": "Rajasthan Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Rajasthan",
+    "address": "Tulsi Tower, 9th B Road Sardarpura, Jodhpur – 342003 (Rajasthan)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-008",
+    "partner_name": "Uttar Pradesh Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Uttar Pradesh",
+    "address": "2nd & 3rd Floor, NBCC Commercial Complex, Vardan Khand, Gomti Nagar Extension, Lucknow–229001(Uttar Pradesh)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-009",
+    "partner_name": "Kerala Grameena Bank",
+    "partner_type": "RRB",
+    "state": "Kerala",
+    "address": "PB No.10, KGpB Towers, AK Road, Uphill, Malappuram,Kerala – 676505.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-010",
+    "partner_name": "Uttarakhand Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Uttarakhand",
+    "address": "18-New Road, Dehradun, Uttarakhand.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-011",
+    "partner_name": "Tripura Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Tripura",
+    "address": "H.O. Airport Road, PO Abhaynagar, Agartala, Tripura (W) Pin – 799 005.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-012",
+    "partner_name": "Karnataka Grameena Bank",
+    "partner_type": "RRB",
+    "state": "Karnataka",
+    "address": "Head Office, CA 20, Vijayanagar IInd Stage, Musure – 570017 (Karnataka)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-013",
+    "partner_name": "Assam Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Assam",
+    "address": "HO, G.S. Road, Bhangagarh, Guwahati- 781 005.(Assam)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-014",
+    "partner_name": "Andhra Pradesh Grameena Bank",
+    "partner_type": "RRB",
+    "state": "Andhra Pradesh",
+    "address": "4th Floor, Raghu Mansion, 4-1, Broadipet, Guntur -522 002 (Andhra Pradesh)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-015",
+    "partner_name": "Punjab Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Punjab",
+    "address": "HO Jalandhar Road, Kapurthala – 144 601. (Punjab)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-016",
+    "partner_name": "Tamil Nadu Grama Bank",
+    "partner_type": "RRB",
+    "state": "Tamil Nadu",
+    "address": "6, Yercaud Road, Hasthasmpatti, Salem – 636007 (Tamil Nadu)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-017",
+    "partner_name": "Madhaya Pradesh Gramin Bank. C21",
+    "partner_type": "RRB",
+    "state": null,
+    "address": "Business Park, C21 Square opposite Hotel Radisson Blue, MR-10 Indore- 452010, Madhaya Pradesh",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-018",
+    "partner_name": "Himachal Pradesh Gramin Bank",
+    "partner_type": "RRB",
+    "state": "Himachal Pradesh",
+    "address": "Jail Road (Panjethi), PO – Talyahar Mandi 175001 (Himachal Pradesh)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-019",
+    "partner_name": "Puducherry Grama Bank",
+    "partner_type": "RRB",
+    "state": "Puducherry",
+    "address": "No.441, Mahatma Gandhi Road, Muthialpet, Puducherry – 605 003",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-020",
+    "partner_name": "West Bengal Gramin Bank Natabar Paul Road",
+    "partner_type": "RRB",
+    "state": null,
+    "address": "Chatterjee Para More, Tikiapara, Howrah – 711101 (WB)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-021",
+    "partner_name": "Chhattisgarh Gramin Bank",
+    "partner_type": "RRB",
+    "state": null,
+    "address": "Corporate Office Raipur, Plot No.-47, Sector-24, Atal Nagar, Nava Raipur-492013",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-022",
+    "partner_name": "Manipur Rural Bank",
+    "partner_type": "RRB",
+    "state": "Manipur",
+    "address": "Keishampat, Keisham Leikai, Imphal, Manipur 795001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-023",
+    "partner_name": "Meghalaya Rural Bank",
+    "partner_type": "RRB",
+    "state": null,
+    "address": "M.T.C Building, 2nd Floor, Police Bazar, Shillong-793001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-024",
+    "partner_name": "J&K Grameen Bank",
+    "partner_type": "RRB",
+    "state": "Jammu & Kashmir",
+    "address": "Jammu & Kashmir Near Fruit Complex, Narwal, Jammu (J&K) -180006",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-025",
+    "partner_name": "Odisha Grameen Bank",
+    "partner_type": "RRB",
+    "state": "Odisha",
+    "address": "Bhubaneswar. 7R25-H75, Jagamara, Sunderpada Road, Gandamuda, Pokhhariput, Bhubaneshwar -751030,Odisha",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "RRB-026",
+    "partner_name": "Mizoram Rural Bank",
+    "partner_type": "RRB",
+    "state": "Mizoram",
+    "address": "Mizoram MINECO, Khatla Aizawl - 796001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-001",
+    "partner_name": "Andhra Pradesh Scheduled Castes Cooperative Finance Corporation Ltd. (APSCCFC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "SP River View Apartments, 3rd Floor, Tadepalli, Amaravathi – 522 501.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-002",
+    "partner_name": "Andhra Pradesh State Financial Corporation (APSFC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "APSFC Building, Plot OS No.2, 2nd Cross, 3rd Road, Industrial Park, Vijayawada – 520 007.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-003",
+    "partner_name": "Assam State Development Corporation for SCs Ltd. (ASCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Swahid Dilip Hozori Path, Sarumotoria, Dispur, Guwahati – 781 006.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-004",
+    "partner_name": "Bihar State SCs Co-operative Development Corporation Ltd. (BSSCCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "RN-212, Officers Colony (Block-A), Bailey Road, Patna – 800 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-005",
+    "partner_name": "Chandigarh SCs, BCs & Minorities Financial & Development Corporation Ltd. (CSCFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "3rd Floor, Additional Town Hall Building, Sector-17-C, Chandigarh-160 017.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-006",
+    "partner_name": "Chhatisgarh State Antavasayee Sahkari Fin. & Dev.Corpn., (CGSCFDC)",
+    "partner_type": "SCA",
+    "state": "Chhattisgarh",
+    "address": "4th Floor, Business Complex, Chhattisgarh Housing Board Bhawan, Naya Raipur, Chhattisgarh - 492101.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-007",
+    "partner_name": "Dadra & Nagar Haveli, Daman & Diu SCs/STs/OBCs & Minorities Financial & Development Corporation (DNDSFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Ground Floor, Right Wing, New Collectorate Building, Near Electricity Department, Opp. 66, KVA Sub- Station, 66 KVA Road, Silvassa – 396 230.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-008",
+    "partner_name": "Delhi SC/ST/OBC/Minorities & Handicapped Financial & Development Corporation (DSFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Ambedkar Bhawan, Sector-16, (Opp. Sector-11), Rohini, Delhi – 110 085.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-009",
+    "partner_name": "The Managing Director, Gujarat SCs Development Corporation (GSCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Dr Jivraj Mehta Bhawan, Block – 10, II Floor, Old Sachivalaya, Gandhinagar – 382 010.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-010",
+    "partner_name": "Dr. Ambedkar Antyodaya Vikas Nigam (S.C.) (DAAVN)",
+    "partner_type": "SCA",
+    "state": "Gujarat",
+    "address": "Karmayogi Bhavan, Block No. 2, D-2 Wing, 4th Floor, Sector -10/B, Gandhinagar, Gujarat.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-011",
+    "partner_name": "Goa State SCs & OBCs Finance and Development Corporation Ltd. (GSCOBCDC)",
+    "partner_type": "SCA",
+    "state": "Goa",
+    "address": "4th Floor, Patto Centre, Near K.T.C. Bus Stand, Panaji, Goa – 403 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-012",
+    "partner_name": "Haryana SCs Fin. and Development Corporation Ltd., (HSCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "SCO-2427-28, Sector 22-C, Chandigarh – 160 022.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-013",
+    "partner_name": "Himachal Pradesh SCs & STs Development Corporation (HPSCSTDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Kalyan Bhawan, Near Ambusha Resort, Solan – 173212",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-014",
+    "partner_name": "Jharkhand State Scheduled Castes Cooperative Development Corporation (JSCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Kalyan Complex, 3rd Floor, Balihar Road, Morabadi, Ranchi-834008.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-015",
+    "partner_name": "J&K SCs, STs & OBCs Dev. Corpn. Ltd. (JKSCSTBCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Exchange Road, Near Red Cross Office, Srinagar – 190 001 (Office : May to October) & 135-A, Last Morh, Gandhi Nagar JAMMU -180 004 (Office : November to April)",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-016",
+    "partner_name": "Dr B. R. Ambedkar Development Corporation Ltd. (DBRADC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "9th & 10th Floor, Visheshwariah Mini Tower, Dr Ambedkar Veedhi, Bengaluru – 560 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-017",
+    "partner_name": "Kerala State Development Corporation for SCs & STs Ltd., (KSDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Town Hall Road, Thrissur – 680 020.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-018",
+    "partner_name": "Kerala State Women's Development Corporation (KSWDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "1st Floor, Transport Bhavan, KSRTC Building, East Fort, Attakulangara- 695023,",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-019",
+    "partner_name": "MP State Cooperative SC Finance & Development Corporation (MPSCFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Rajiv Gandhi Bhawan, 35, Shyamala Hills, Bhopal – 462 011.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-020",
+    "partner_name": "Mahatma Phule BCs Development Corporation Ltd. (MPBCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "1-N, Supreme Shopping Centre, Gulmohar Cross Road No.9, J.V.P.D. Scheme, Juhu, Mumbai – 400 049.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-021",
+    "partner_name": "Sahityaratna Lokshahir Annabhau Sathe Development Corporation Ltd.(SLASDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "New Administration Building No.2, 3rd Floor, Ramkrushna Chemburkar Marg, Chembur (E), Mumbai – 400 071.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-022",
+    "partner_name": "Sant Rohidas Leather Industries & Charmakar Development Corporation (LIDCOM)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Bombay Life Building, 5th Floor, 45, Veer Nariman Road, Mumbai – 400 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-023",
+    "partner_name": "Manipur Tribal Development Corporation Ltd. (MTDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Lamphelpat, Imphal – 795 004.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-024",
+    "partner_name": "Manipur SCs & STs Co- operative Dev. Bank (MSTCB)",
+    "partner_type": "SCA",
+    "state": "Manipur",
+    "address": "Nambun Long, Stadium Road, Imphal East, MANIPUR-795001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-025",
+    "partner_name": "Meghalaya Cooperative Apex Bank Ltd. (MCAB)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "M.G. Road, Kutchery, Shillong – 793 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-026",
+    "partner_name": "Mizoram Urban Cooperative Development Bank Ltd. (MUCO Bank)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Lawlsawmiliani Building (Top Floor), Zarkawt, Aizwal -796 001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-027",
+    "partner_name": "Mizoram Khadi & Village Industries & Board (MKVIB)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "“Zorun” Zarkawt, Aizwal -796 007.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-028",
+    "partner_name": "Odisha SCs & STs Dev. Finance Co-op. Corpn. Ltd. (OSFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Lewis Road, Bhubaneshwar – 751 014.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-029",
+    "partner_name": "Puducherry Adi Dravidar Dev. Corpn. Ltd. (PADCO)",
+    "partner_type": "SCA",
+    "state": "Puducherry",
+    "address": "III Floor, Directorate of Adi Dravidar Welfare Department, Thattanchavady, Puducherry - 605 009",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-030",
+    "partner_name": "Punjab Scheduled Castes Land Development & Finance Corporation (PSCLDFC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "SCO No.101-102-103, Sector 17-C, Chandigarh – 160 017.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-031",
+    "partner_name": "Rajasthan SCs & STs Fin. & Dev. Co-op. Corporation Ltd. (RSCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "III Floor, Central Block, Nehru Sahakar Bhawan, Bhawani Singh Marg, Jaipur–302005.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-032",
+    "partner_name": "Sikkim Scheduled Castes Scheduled Tribes & Backward Classes Development Corporation (SSCSTBCDC)",
+    "partner_type": "SCA",
+    "state": "Sikkim",
+    "address": "Bhanupath, Gangtok, Sikkim – 737 101.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-033",
+    "partner_name": "Tamil Nadu Adi Dravidar Housing & Development Corporation Ltd. (TAHDCO)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "No.31, Cenotaph Road, 2nd Lane, Teynamtet, Chennai -600 018.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-034",
+    "partner_name": "Tripura Scheduled Castes Co-op. Devp. Corpn. Ltd. (TSCDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Krishna Nagar P.O. Lake Chomubani, Agartala – 799 001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-035",
+    "partner_name": "Uttarakhand Bahu-udeshiya Vitta Evam Vikas Nigam (UBVEVN)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "Janjati Directorate, New Building, Bhagat Singh Clolony (Adhoiwala), Dehradun-248 001",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-036",
+    "partner_name": "UP Sahkari Gram Vikas Bank Ltd.",
+    "partner_type": "SCA",
+    "state": "Uttar Pradesh",
+    "address": "10, Mall Avenue, Lucknow, Uttar Pradesh-226001.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-037",
+    "partner_name": "UP Scheduled Castes Finance & Dev. Corpn. Ltd., (UPSCFDC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "B-912, Sector-C, Mahanagar, Lucknow – 226 006.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SCA-038",
+    "partner_name": "West Bengal SCs, STs & OBC Development & Finance Corporation (WBSCSTOBCDFC)",
+    "partner_type": "SCA",
+    "state": null,
+    "address": "CF 217/A/1 Salt Lake Sector –I, (Mangolic Building) Kolkata – 700 064.",
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SFB-001",
+    "partner_name": "AU Small Finance Bank",
+    "partner_type": "Small Finance Bank",
+    "state": null,
+    "address": null,
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  },
+  {
+    "partner_id": "SFB-002",
+    "partner_name": "Ujjivan Small Finance Bank",
+    "partner_type": "Small Finance Bank",
+    "state": null,
+    "address": null,
+    "source_url": "https://nsfdc.nic.in/our-channel-partners"
+  }
+]

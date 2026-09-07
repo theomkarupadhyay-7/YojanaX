@@ -1,0 +1,65 @@
+{
+    "program": "NSFDC",
+
+    "applicant_types": [
+        "individual",
+        "partnership_firm",
+        "cooperative_society"
+    ],
+
+    "common_rules": {
+        "caste": {
+            "required": true,
+            "category": "SC",
+            "valid_certificate_required": true
+        },
+
+        "annual_family_income": {
+            "maximum": 500000,
+            "currency": "INR",
+            "applies_to": [
+                "credit_loan"
+            ],
+            "geography": [
+                "rural",
+                "urban"
+            ],
+            "effective_from": "2026-01-07"
+        }
+    },
+
+    "entity_rules": {
+        "partnership_firm": {
+            "all_members_must_be_sc": true,
+            "income_limit_applies_to_each_member": true
+        },
+
+        "cooperative_society": {
+            "all_members_must_be_sc": true,
+            "income_limit_applies_to_each_member": true
+        }
+    },
+
+    "application": {
+        "direct_application_to_nsfdc": false,
+        "required_route": [
+            "SCA",
+            "CA"
+        ]
+    },
+
+    "verification": {
+        "primary_verification_by": [
+            "SCA",
+            "CA"
+        ],
+        "nsfdc_can_reverify": true
+    },
+
+    "source": {
+        "organization": "National Scheduled Castes Finance and Development Corporation",
+        "source_name": "Eligibility Requirements",
+        "url": "https://nsfdc.nic.in/eligibility-requirements",
+        "retrieved_at": "2026-09-04"
+    }
+}

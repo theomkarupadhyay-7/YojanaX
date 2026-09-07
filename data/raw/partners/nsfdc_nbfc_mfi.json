@@ -1,0 +1,44 @@
+[
+  {
+    "partner_id": "NBFC-MFI-001",
+    "partner_type": "NBFC-MFI",
+    "name": "Anik Financial Services Private Limited",
+    "address": "Regd.Office: ‘Sahyadri Building” Behind Amitesh Hotel, Ambajogai Roa, Sai Naka, Latur – 413 512"
+  },
+  {
+    "partner_id": "NBFC-MFI-002",
+    "partner_type": "NBFC-MFI",
+    "name": "Grameen Development & Finance Private Limited",
+    "address": "Dubjent, Kulshi Road, Chhaygaon, Kamrup, Assam Pin – 781 124."
+  },
+  {
+    "partner_id": "NBFC-MFI-003",
+    "partner_type": "NBFC-MFI",
+    "name": "ASA International Microfinance Ltd.",
+    "address": "Kolkata Victoria Park, 4th Floor, GN-37/2, Sector-V, Salt Lake City, Kolkata – 700 091, West Bengal."
+  },
+  {
+    "partner_id": "NBFC-MFI-004",
+    "partner_type": "NBFC-MFI",
+    "name": "Midland Microfin Ltd.",
+    "address": "Ludhiana The Axis, Plot No.1, R.B.Badri Dass Colony, BMC Chowk, G.T.Road, Jalandhar – 144 001, Punjab."
+  },
+  {
+    "partner_id": "NBFC-MFI-005",
+    "partner_type": "NBFC-MFI",
+    "name": "Satin Creditcare Network Ltdl.",
+    "address": "Gurgaon Plot No.492, Udyog Vihar, Phase-III, Gurugram, Haryana – 122 016."
+  },
+  {
+    "partner_id": "NBFC-MFI-006",
+    "partner_type": "NBFC-MFI",
+    "name": "Pahal Financial Services Pvt. Ltd.",
+    "address": "Ahmedabad 7th Floor, Binori B Square-2, Opp. Hathising Ni Vadi, Ambli-Iscon Road, Ahmedabad – 380 054, Gujarat"
+  },
+  {
+    "partner_id": "NBFC-MFI-007",
+    "partner_type": "NBFC-MFI",
+    "name": "Vector Finance PVT LTD RO-K7/110",
+    "address": "Ground Floor, Klinga Vihar, P.S. Khandagiri, Bhubaneswar ODISHA-751029"
+  }
+]

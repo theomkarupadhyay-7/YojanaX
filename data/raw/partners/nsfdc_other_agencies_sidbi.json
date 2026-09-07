@@ -1,0 +1,23 @@
+[
+  {
+    "partner_id": "OTHER-001",
+    "partner_type": "Other Agency / SIDBI",
+    "region_or_category": "Assam",
+    "name": "North Eastern Development Finance Corporation Ltd. (NEDFi)",
+    "address": "Tea Auction Center, GS Rd, Sanket Vihar, Dispur, Opposite, Guwahati, Assam 781006"
+  },
+  {
+    "partner_id": "OTHER-002",
+    "partner_type": "Other Agency / SIDBI",
+    "region_or_category": "Jharkhand",
+    "name": "Jharkhand Silk Textile & Handicraft Development Corporation Ltd. (JHARCRAFT)",
+    "address": "Jharcraft, DIC Campus Ratu Road Ranchi Jharkhand 834001"
+  },
+  {
+    "partner_id": "OTHER-003",
+    "partner_type": "Other Agency / SIDBI",
+    "region_or_category": "SIDBI",
+    "name": "Small Industries Development Bank of India",
+    "address": "SIDBI Tower, 15, Ashok Marg, Lucknow - 226001, Uttar Pradesh"
+  }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "scheme_id": null,
+        "scheme_name": "Micro Finance Scheme (MFS)",
+        "description": "NSFDC provides Micro Credit Finance for units costing up to ₹ 1.40 lakh . The salient features of the scheme are as follows:",
+        "financial_details": {},
+        "repayment_details": {},
+        "channel_requirements": [],
+        "eligibility": {},
+        "documents": [],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "Term Loan",
+        "description": "NSFDC provides Term Loans for units costing more than ₹ 1.40 lakh and up to ₹ 50.00 lakh . The salient features of the scheme are as follows:",
+        "financial_details": {},
+        "repayment_details": {},
+        "channel_requirements": [],
+        "eligibility": {},
+        "documents": [],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "Aajeevika Micro-Finance Yojana",
+        "description": "NSFDC provides prompt and need-based micro finance to eligible Scheduled Caste persons at reasonable interest rates through selected NBFC-MFIs to pursue small / micro business activities.",
+        "financial_details": {},
+        "repayment_details": {},
+        "channel_requirements": [],
+        "eligibility": {},
+        "documents": [],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "Udyam Nidhi Yojana (UNY)",
+        "description": "NSFDC provides loans under Udyam Nidhi Yojana (UNY) for projects/units costing up to ₹ 5.00 lakh . Loans are provided through Cooperative Societies, Cooperative Banks, and Small Finance Banks (SFBs) to pursue small / micro activities.",
+        "financial_details": {},
+        "repayment_details": {},
+        "channel_requirements": [],
+        "eligibility": {},
+        "documents": [],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    },
+    {
+        "scheme_id": null,
+        "scheme_name": "Educational Loan Scheme (ELS)",
+        "description": "Educational Loan shall be provided to eligible students for pursuing regular full-time professional / technical recognized courses approved by the Government in India or abroad.",
+        "financial_details": {},
+        "repayment_details": {},
+        "channel_requirements": [],
+        "eligibility": {},
+        "documents": [],
+        "source": {
+            "organization": "National Scheduled Castes Finance and Development Corporation",
+            "source_name": "NSFDC Loans / Credit Schemes",
+            "url": "https://nsfdc.nic.in/scheme",
+            "retrieved_at": "2026-09-04"
+        }
+    }
+]

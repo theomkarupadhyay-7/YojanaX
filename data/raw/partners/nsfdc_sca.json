@@ -1,0 +1,268 @@
+[
+  {
+    "partner_id": "SCA-001",
+    "partner_type": "SCA",
+    "state_ut": "Andhra Pradesh",
+    "name": "Andhra Pradesh Scheduled Castes Cooperative Finance Corporation Ltd. (APSCCFC)",
+    "address": "SP River View Apartments, 3rd Floor, Tadepalli, Amaravathi – 522 501."
+  },
+  {
+    "partner_id": "SCA-002",
+    "partner_type": "SCA",
+    "state_ut": "Andhra Pradesh",
+    "name": "Andhra Pradesh State Financial Corporation (APSFC)",
+    "address": "APSFC Building, Plot OS No.2, 2nd Cross, 3rd Road, Industrial Park, Vijayawada – 520 007."
+  },
+  {
+    "partner_id": "SCA-003",
+    "partner_type": "SCA",
+    "state_ut": "Assam",
+    "name": "Assam State Development Corporation for SCs Ltd. (ASCDC)",
+    "address": "Swahid Dilip Hozori Path, Sarumotoria, Dispur, Guwahati – 781 006."
+  },
+  {
+    "partner_id": "SCA-004",
+    "partner_type": "SCA",
+    "state_ut": "Bihar",
+    "name": "Bihar State SCs Co-operative Development Corporation Ltd. (BSSCCDC)",
+    "address": "RN-212, Officers Colony (Block-A), Bailey Road, Patna – 800 001."
+  },
+  {
+    "partner_id": "SCA-005",
+    "partner_type": "SCA",
+    "state_ut": "Chandigarh",
+    "name": "Chandigarh SCs, BCs & Minorities Financial & Development Corporation Ltd. (CSCFDC)",
+    "address": "3rd Floor, Additional Town Hall Building, Sector-17-C, Chandigarh-160 017."
+  },
+  {
+    "partner_id": "SCA-006",
+    "partner_type": "SCA",
+    "state_ut": "Chhattisgarh",
+    "name": "Chhatisgarh State Antavasayee Sahkari Fin. & Dev.Corpn., (CGSCFDC)",
+    "address": "4th Floor, Business Complex, Chhattisgarh Housing Board Bhawan, Naya Raipur, Chhattisgarh - 492101."
+  },
+  {
+    "partner_id": "SCA-007",
+    "partner_type": "SCA",
+    "state_ut": "Dadra & Nagar Haveli, Daman & Diu",
+    "name": "Dadra & Nagar Haveli, Daman & Diu SCs/STs/OBCs & Minorities Financial & Development Corporation (DNDSFDC)",
+    "address": "Ground Floor, Right Wing, New Collectorate Building, Near Electricity Department, Opp. 66, KVA Sub- Station, 66 KVA Road, Silvassa – 396 230."
+  },
+  {
+    "partner_id": "SCA-008",
+    "partner_type": "SCA",
+    "state_ut": "Delhi",
+    "name": "Delhi SC/ST/OBC/Minorities & Handicapped Financial & Development Corporation (DSFDC)",
+    "address": "Ambedkar Bhawan, Sector-16, (Opp. Sector-11), Rohini, Delhi – 110 085."
+  },
+  {
+    "partner_id": "SCA-009",
+    "partner_type": "SCA",
+    "state_ut": "Gujarat",
+    "name": "The Managing Director, Gujarat SCs Development Corporation (GSCDC)",
+    "address": "Dr Jivraj Mehta Bhawan, Block – 10, II Floor, Old Sachivalaya, Gandhinagar – 382 010."
+  },
+  {
+    "partner_id": "SCA-010",
+    "partner_type": "SCA",
+    "state_ut": "Gujarat",
+    "name": "Dr. Ambedkar Antyodaya Vikas Nigam (S.C.) (DAAVN)",
+    "address": "Karmayogi Bhavan, Block No. 2, D-2 Wing, 4th Floor, Sector -10/B, Gandhinagar, Gujarat."
+  },
+  {
+    "partner_id": "SCA-011",
+    "partner_type": "SCA",
+    "state_ut": "Goa",
+    "name": "Goa State SCs & OBCs Finance and Development Corporation Ltd. (GSCOBCDC)",
+    "address": "4th Floor, Patto Centre, Near K.T.C. Bus Stand, Panaji, Goa – 403 001."
+  },
+  {
+    "partner_id": "SCA-012",
+    "partner_type": "SCA",
+    "state_ut": "Haryana",
+    "name": "Haryana SCs Fin. and Development Corporation Ltd., (HSCDC)",
+    "address": "SCO-2427-28, Sector 22-C, Chandigarh – 160 022."
+  },
+  {
+    "partner_id": "SCA-013",
+    "partner_type": "SCA",
+    "state_ut": "Himachal Pradesh",
+    "name": "Himachal Pradesh SCs & STs Development Corporation (HPSCSTDC)",
+    "address": "Kalyan Bhawan, Near Ambusha Resort, Solan – 173212"
+  },
+  {
+    "partner_id": "SCA-014",
+    "partner_type": "SCA",
+    "state_ut": "Jharkhand",
+    "name": "Jharkhand State Scheduled Castes Cooperative Development Corporation (JSCDC)",
+    "address": "Kalyan Complex, 3rd Floor, Balihar Road, Morabadi, Ranchi-834008."
+  },
+  {
+    "partner_id": "SCA-015",
+    "partner_type": "SCA",
+    "state_ut": "Jammu & Kashmir",
+    "name": "J&K SCs, STs & OBCs Dev. Corpn. Ltd. (JKSCSTBCDC)",
+    "address": "Exchange Road, Near Red Cross Office, Srinagar – 190 001 (Office : May to October) & 135-A, Last Morh, Gandhi Nagar JAMMU -180 004 (Office : November to April)"
+  },
+  {
+    "partner_id": "SCA-016",
+    "partner_type": "SCA",
+    "state_ut": "Karnataka",
+    "name": "Dr B. R. Ambedkar Development Corporation Ltd. (DBRADC)",
+    "address": "9th & 10th Floor, Visheshwariah Mini Tower, Dr Ambedkar Veedhi, Bengaluru – 560 001."
+  },
+  {
+    "partner_id": "SCA-017",
+    "partner_type": "SCA",
+    "state_ut": "Kerala",
+    "name": "Kerala State Development Corporation for SCs & STs Ltd., (KSDC)",
+    "address": "Town Hall Road, Thrissur – 680 020."
+  },
+  {
+    "partner_id": "SCA-018",
+    "partner_type": "SCA",
+    "state_ut": "Kerala",
+    "name": "Kerala State Women's Development Corporation (KSWDC)",
+    "address": "1st Floor, Transport Bhavan, KSRTC Building, East Fort, Attakulangara- 695023,"
+  },
+  {
+    "partner_id": "SCA-019",
+    "partner_type": "SCA",
+    "state_ut": "Madhya Pradesh",
+    "name": "MP State Cooperative SC Finance & Development Corporation (MPSCFDC)",
+    "address": "Rajiv Gandhi Bhawan, 35, Shyamala Hills, Bhopal – 462 011."
+  },
+  {
+    "partner_id": "SCA-020",
+    "partner_type": "SCA",
+    "state_ut": "Maharashtra",
+    "name": "Mahatma Phule BCs Development Corporation Ltd. (MPBCDC)",
+    "address": "1-N, Supreme Shopping Centre, Gulmohar Cross Road No.9, J.V.P.D. Scheme, Juhu, Mumbai – 400 049."
+  },
+  {
+    "partner_id": "SCA-021",
+    "partner_type": "SCA",
+    "state_ut": "Maharashtra",
+    "name": "Sahityaratna Lokshahir Annabhau Sathe Development Corporation Ltd.(SLASDC)",
+    "address": "New Administration Building No.2, 3rd Floor, Ramkrushna Chemburkar Marg, Chembur (E), Mumbai – 400 071."
+  },
+  {
+    "partner_id": "SCA-022",
+    "partner_type": "SCA",
+    "state_ut": "Maharashtra",
+    "name": "Sant Rohidas Leather Industries & Charmakar Development Corporation (LIDCOM)",
+    "address": "Bombay Life Building, 5th Floor, 45, Veer Nariman Road, Mumbai – 400 001."
+  },
+  {
+    "partner_id": "SCA-023",
+    "partner_type": "SCA",
+    "state_ut": "Manipur",
+    "name": "Manipur Tribal Development Corporation Ltd. (MTDC)",
+    "address": "Lamphelpat, Imphal – 795 004."
+  },
+  {
+    "partner_id": "SCA-024",
+    "partner_type": "SCA",
+    "state_ut": "Manipur",
+    "name": "Manipur SCs & STs Co- operative Dev. Bank (MSTCB)",
+    "address": "Nambun Long, Stadium Road, Imphal East, MANIPUR-795001."
+  },
+  {
+    "partner_id": "SCA-025",
+    "partner_type": "SCA",
+    "state_ut": "Meghalaya",
+    "name": "Meghalaya Cooperative Apex Bank Ltd. (MCAB)",
+    "address": "M.G. Road, Kutchery, Shillong – 793 001."
+  },
+  {
+    "partner_id": "SCA-026",
+    "partner_type": "SCA",
+    "state_ut": "Mizoram",
+    "name": "Mizoram Urban Cooperative Development Bank Ltd. (MUCO Bank)",
+    "address": "Lawlsawmiliani Building (Top Floor), Zarkawt, Aizwal -796 001."
+  },
+  {
+    "partner_id": "SCA-027",
+    "partner_type": "SCA",
+    "state_ut": "Mizoram",
+    "name": "Mizoram Khadi & Village Industries & Board (MKVIB)",
+    "address": "“Zorun” Zarkawt, Aizwal -796 007."
+  },
+  {
+    "partner_id": "SCA-028",
+    "partner_type": "SCA",
+    "state_ut": "Odisha",
+    "name": "Odisha SCs & STs Dev. Finance Co-op. Corpn. Ltd. (OSFDC)",
+    "address": "Lewis Road, Bhubaneshwar – 751 014."
+  },
+  {
+    "partner_id": "SCA-029",
+    "partner_type": "SCA",
+    "state_ut": "Puducherry",
+    "name": "Puducherry Adi Dravidar Dev. Corpn. Ltd. (PADCO)",
+    "address": "III Floor, Directorate of Adi Dravidar Welfare Department, Thattanchavady, Puducherry - 605 009"
+  },
+  {
+    "partner_id": "SCA-030",
+    "partner_type": "SCA",
+    "state_ut": "Punjab",
+    "name": "Punjab Scheduled Castes Land Development & Finance Corporation (PSCLDFC)",
+    "address": "SCO No.101-102-103, Sector 17-C, Chandigarh – 160 017."
+  },
+  {
+    "partner_id": "SCA-031",
+    "partner_type": "SCA",
+    "state_ut": "Rajasthan",
+    "name": "Rajasthan SCs & STs Fin. & Dev. Co-op. Corporation Ltd. (RSCDC)",
+    "address": "III Floor, Central Block, Nehru Sahakar Bhawan, Bhawani Singh Marg, Jaipur–302005."
+  },
+  {
+    "partner_id": "SCA-032",
+    "partner_type": "SCA",
+    "state_ut": "Sikkim",
+    "name": "Sikkim Scheduled Castes Scheduled Tribes & Backward Classes Development Corporation (SSCSTBCDC)",
+    "address": "Bhanupath, Gangtok, Sikkim – 737 101."
+  },
+  {
+    "partner_id": "SCA-033",
+    "partner_type": "SCA",
+    "state_ut": "Tamil Nadu",
+    "name": "Tamil Nadu Adi Dravidar Housing & Development Corporation Ltd. (TAHDCO)",
+    "address": "No.31, Cenotaph Road, 2nd Lane, Teynamtet, Chennai -600 018."
+  },
+  {
+    "partner_id": "SCA-034",
+    "partner_type": "SCA",
+    "state_ut": "Tripura",
+    "name": "Tripura Scheduled Castes Co-op. Devp. Corpn. Ltd. (TSCDC)",
+    "address": "Krishna Nagar P.O. Lake Chomubani, Agartala – 799 001"
+  },
+  {
+    "partner_id": "SCA-035",
+    "partner_type": "SCA",
+    "state_ut": "Uttarakhand",
+    "name": "Uttarakhand Bahu-udeshiya Vitta Evam Vikas Nigam (UBVEVN)",
+    "address": "Janjati Directorate, New Building, Bhagat Singh Clolony (Adhoiwala), Dehradun-248 001"
+  },
+  {
+    "partner_id": "SCA-036",
+    "partner_type": "SCA",
+    "state_ut": "Uttar Pradesh",
+    "name": "UP Sahkari Gram Vikas Bank Ltd.",
+    "address": "10, Mall Avenue, Lucknow, Uttar Pradesh-226001."
+  },
+  {
+    "partner_id": "SCA-037",
+    "partner_type": "SCA",
+    "state_ut": "Uttar Pradesh",
+    "name": "UP Scheduled Castes Finance & Dev. Corpn. Ltd., (UPSCFDC)",
+    "address": "B-912, Sector-C, Mahanagar, Lucknow – 226 006."
+  },
+  {
+    "partner_id": "SCA-038",
+    "partner_type": "SCA",
+    "state_ut": "West Bengal",
+    "name": "West Bengal SCs, STs & OBC Development & Finance Corporation (WBSCSTOBCDFC)",
+    "address": "CF 217/A/1 Salt Lake Sector –I, (Mangolic Building) Kolkata – 700 064."
+  }
+]
