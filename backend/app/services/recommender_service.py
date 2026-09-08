@@ -69,6 +69,34 @@ def _normalise(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value).strip().lower())
 
 
+def _get_val(obj: Any, key: str, default: Any = None) -> Any:
+    if isinstance(obj, dict):
+        return obj.get(key, default)
+    return getattr(obj, key, default)
+
+
+def _only_channel_partner_pending(item: Any) -> bool:
+    """
+    Return True when an 'incomplete' result has NO failed checks and
+    every pending check is solely about the channel partner.
+    Such a result means the applicant passes all real eligibility
+    criteria; only the partner selection step is outstanding.
+    """
+    checks = _get_val(item, "checks", []) or []
+    has_failed = any(
+        _get_val(c, "status") == "failed" for c in checks
+    )
+    if has_failed:
+        return False
+    pending = [c for c in checks if _get_val(c, "status") == "pending"]
+    if not pending:
+        return False
+    return all(
+        "channel partner" in str(_get_val(c, "criterion", "")).lower().replace("_", " ")
+        for c in pending
+    )
+
+
 def _eligible_results(
     request: RecommendationRequest,
 ) -> list[Any]:
@@ -84,12 +112,17 @@ def _eligible_results(
     )
 
     response = check_eligibility(eligibility_request)
+    results = _get_val(response, "results", []) or []
 
-    return [
-        item
-        for item in response.results
-        if getattr(item, "status", None) == "eligible"
-    ]
+    eligible = []
+    for item in results:
+        status = _get_val(item, "status")
+        if status == "eligible":
+            eligible.append(item)
+        elif status == "incomplete" and _only_channel_partner_pending(item):
+            eligible.append(item)
+
+    return eligible
 
 
 def _deterministic_score(
@@ -247,7 +280,7 @@ def recommend_schemes(
     candidates = []
 
     for item in eligible:
-        scheme_id = str(item.scheme_id).upper()
+        scheme_id = str(_get_val(item, "scheme_id", "")).upper()
 
         score, factors = _deterministic_score(
             scheme_id,
@@ -257,7 +290,8 @@ def recommend_schemes(
         candidates.append(
             {
                 "scheme_id": scheme_id,
-                "scheme_name": str(item.scheme_name),
+                "scheme_name": str(_get_val(item, "scheme_name", "")),
+                "eligibility_status": str(_get_val(item, "status", "")),
                 "deterministic_score": score,
                 "fit_factors": factors,
             }
@@ -280,7 +314,7 @@ def recommend_schemes(
                 scheme_id=item["scheme_id"],
                 scheme_name=item["scheme_name"],
                 match_score=item["deterministic_score"],
-                eligibility_status="eligible",
+                eligibility_status=item["eligibility_status"],
                 recommendation_reason=item["fit_factors"][0],
                 fit_factors=item["fit_factors"],
             )
