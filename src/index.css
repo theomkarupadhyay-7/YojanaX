@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --color-navy-50: #f0f4f9;
+  --color-navy-100: #d9e2ee;
+  --color-navy-800: #14294b;
+  --color-navy-900: #091e42;
+  --color-navy-950: #051229;
+
+  --color-saffron-500: #f97316;
+  --color-saffron-600: #ea580c;
+
+  --color-indiagreen-600: #16a34a;
+  --color-indiagreen-700: #15803d;
+}
+
+/* Subtle civic grid pattern (unused by default, kept for parity with original) */
+.bg-grid-subtle {
+  background-image: radial-gradient(rgba(9, 30, 66, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Floating badge animation on the hero illustration */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+.animate-float-slow {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-gentle 6s ease-in-out infinite 3s;
+}
+
+/* Popup Modal Animations */
+@keyframes backdrop-fade-in {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+@keyframes popup-pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(16px);
+  }
+  65% {
+    transform: scale(1.01) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-backdrop-in {
+  animation: backdrop-fade-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-popup-in {
+  animation: popup-pop-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar for modal content */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.65);
+}
+
+/* Dark mode overrides — toggled via a `dark-mode` class on <body> from App.jsx */
+body.dark-mode {
+  background: #0b1220 !important;
+  color: #e2e8f0;
+}
+body.dark-mode [class*="bg-white"],
+body.dark-mode [class*="bg-slate-50"],
+body.dark-mode [class*="bg-\[#fcfdfd\]"],
+body.dark-mode [class*="bg-\[#f8fafc\]"] {
+  background-color: #111c2e !important;
+}
+body.dark-mode [class*="text-navy-900"],
+body.dark-mode [class*="text-navy-800"],
+body.dark-mode [class*="text-slate-800"],
+body.dark-mode [class*="text-slate-700"],
+body.dark-mode [class*="text-slate-600"] {
+  color: #e2e8f0 !important;
+}
+body.dark-mode [class*="text-slate-500"],
+body.dark-mode [class*="text-slate-400"] {
+  color: #719fdf !important;
+}
+body.dark-mode [class*="border-slate-200"],
+body.dark-mode [class*="border-slate-100"] {
+  border-color: #5f7495 !important;
+}
+body.dark-mode [class*="bg-orange-50"] {
+  background-color: #3a2416 !important;
+}
+body.dark-mode [class*="bg-emerald-50"] {
+  background-color: #123528 !important;
+}
+body.dark-mode [class*="bg-blue-50"] {
+  background-color: #172d49 !important;
+}
+body.dark-mode [class*="bg-gradient-to-r"] {
+  background-image: linear-gradient(to right, #172d49, #1e3a5f, #101827) !important;
+}
+body.dark-mode .animate-float-slow,
+body.dark-mode .animate-float-delayed {
+  background-color: #17243a !important;
+  border-color: #334155 !important;
+}
+body.dark-mode .dark-mode-toggle {
+  color: #fbbf24;
+  border-color: #334155;
+  background: #17243a;
+}

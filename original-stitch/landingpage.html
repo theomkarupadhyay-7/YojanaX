@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>YOJANAX — Government Financial Discovery Platform</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              50: '#f0f4f9',
+              100: '#d9e2ee',
+              800: '#14294b',
+              900: '#091e42',
+              950: '#051229',
+            },
+            saffron: {
+              500: '#f97316',
+              600: '#ea580c',
+            },
+            indiagreen: {
+              600: '#16a34a',
+              700: '#15803d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="background-patterns">
+    /* Subtle civic grid pattern for an authentic institutional yet tech-forward atmosphere */
+    .bg-grid-subtle {
+      background-image: radial-gradient(rgba(9, 30, 66, 0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+<style data-purpose="floating-badges">
+    /* Soft ambient card glow and floating animation accents */
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-5px); }
+    }
+    .animate-float-slow {
+      animation: float-gentle 6s ease-in-out infinite;
+    }
+    .animate-float-delayed {
+      animation: float-gentle 6s ease-in-out infinite 3s;
+    }
+  </style>
+<style data-purpose="dark-mode">
+    body.dark-mode {
+      background: #0b1220 !important;
+      color: #e2e8f0;
+    }
+    body.dark-mode [class*="bg-white"],
+    body.dark-mode [class*="bg-slate-50"],
+    body.dark-mode [class*="bg-\[#fcfdfd\]"],
+    body.dark-mode [class*="bg-\[#f8fafc\]"] {
+      background-color: #111c2e !important;
+    }
+    body.dark-mode [class*="text-navy-900"],
+    body.dark-mode [class*="text-slate-800"],
+    body.dark-mode [class*="text-slate-700"],
+    body.dark-mode [class*="text-slate-600"] {
+      color: #e2e8f0 !important;
+    }
+    body.dark-mode [class*="text-slate-500"],
+    body.dark-mode [class*="text-slate-400"] {
+      color: #719fdf !important;
+    }
+    body.dark-mode [class*="border-slate-200"],
+    body.dark-mode [class*="border-slate-100"] {
+      border-color: #5f7495 !important;
+    }
+    body.dark-mode [class*="bg-orange-50"] {
+      background-color: #3a2416 !important;
+    }
+    body.dark-mode [class*="bg-emerald-50"] {
+      background-color: #123528 !important;
+    }
+    body.dark-mode [class*="bg-blue-50"] {
+      background-color: #172d49 !important;
+    }
+    body.dark-mode #language-menu {
+      background: #111c2e !important;
+      border-color: #293952 !important;
+    }
+    body.dark-mode .language-option:hover {
+      background: #3a2416 !important;
+    }
+    body.dark-mode [class*="bg-gradient-to-r"] {
+      background-image: linear-gradient(to right, #172d49, #1e3a5f, #101827) !important;
+    }
+    body.dark-mode .animate-float-slow,
+    body.dark-mode .animate-float-delayed {
+      background-color: #17243a !important;
+      border-color: #334155 !important;
+    }
+    body.dark-mode .dark-mode-toggle {
+      color: #fbbf24;
+      border-color: #334155;
+      background: #17243a;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#fcfdfd] text-slate-800 font-sans antialiased selection:bg-orange-100 selection:text-orange-900 min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Ambient National Accents in Background -->
+<div class="absolute top-0 right-0 w-[550px] h-[550px] bg-orange-100/40 rounded-full blur-3xl pointer-events-none -z-10 translate-x-1/3 -translate-y-1/3"></div>
+<div class="absolute top-1/3 left-0 w-[450px] h-[450px] bg-emerald-100/30 rounded-full blur-3xl pointer-events-none -z-10 -translate-x-1/2"></div>
+<!-- BEGIN: Top Institutional Header -->
+<aside aria-label="Official Government Banner" class="w-full bg-[#f8fafc] border-b border-slate-200/80 py-1.5 px-4 sm:px-8 text-xs font-medium text-slate-600">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-600"></span>
+<span>An Initiative under Ministry of Electronics &amp; Information Technology</span>
+<span class="hidden md:inline text-slate-300">|</span>
+<span class="hidden md:inline text-slate-500 font-normal">Digital India Program</span>
+</div>
+<div class="flex items-center gap-4 text-[11px] text-slate-500">
+<span class="hidden sm:inline hover:text-navy-900 cursor-pointer">राष्ट्रीय पहचान पोर्टल</span>
+<span class="text-slate-300">|</span>
+<span class="font-semibold text-slate-700">Gov.in Official Registry</span>
+</div>
+</div>
+</aside>
+<!-- END: Top Institutional Header -->
+<!-- BEGIN: Main Navigation -->
+<header class="w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-40">
+<nav aria-label="Primary Navigation" class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+<!-- Left: Official Identity Cluster -->
+<div class="flex items-center gap-4 sm:gap-6">
+<!-- Logo & Brand Name -->
+<a aria-label="YOJANX Home" class="flex items-center gap-2 group" href="#">
+<span class="text-2xl sm:text-3xl font-extrabold tracking-tight text-navy-900 group-hover:text-navy-800 transition-colors">
+            YOJANA<span class="text-saffron-500">X</span>
+</span>
+<span class="hidden lg:inline-block text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">GovTech</span>
+</a>
+<!-- Divider -->
+<div aria-hidden="true" class="h-8 w-px bg-slate-200"></div>
+<!-- National Emblem & Digital India Badges -->
+<div class="flex items-center gap-3">
+<img alt="State Emblem of India" class="h-9 w-auto object-contain" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 120' width='40' height='48' fill='none'&gt;&lt;g fill='%231e3a8a'&gt;&lt;path d='M50 18 C46 18 42 22 42 28 C42 34 46 38 50 38 C54 38 58 34 58 28 C58 22 54 18 50 18 Z' opacity='0.95'/&gt;&lt;path d='M47 25 C47 24 48 23 50 23 C52 23 53 24 53 25 C53 27 51 28 50 30 C49 28 47 27 47 25 Z' fill='%23ffffff'/&gt;&lt;circle cx='46' cy='27' r='1' fill='%231e3a8a'/&gt;&lt;circle cx='54' cy='27' r='1' fill='%231e3a8a'/&gt;&lt;path d='M40 24 C36 26 34 32 36 38 C38 42 42 45 45 47 L44 54 L56 54 L55 47 C58 45 62 42 64 38 C66 32 64 26 60 24 C57 27 54 28 50 28 C46 28 43 27 40 24 Z'/&gt;&lt;path d='M34 26 C30 27 26 32 28 39 C30 44 35 48 40 49 C37 43 35 36 34 26 Z'/&gt;&lt;path d='M66 26 C70 27 74 32 72 39 C70 44 65 48 60 49 C63 43 65 36 66 26 Z'/&gt;&lt;rect x='22' y='55' width='56' height='5' rx='1.5'/&gt;&lt;circle cx='50' cy='69' r='8' stroke='%231e3a8a' stroke-width='1.8' fill='%23ffffff'/&gt;&lt;circle cx='50' cy='69' r='2' fill='%231e3a8a'/&gt;&lt;line x1='50' y1='61' x2='50' y2='77' stroke='%231e3a8a' stroke-width='0.8'/&gt;&lt;line x1='42' y1='69' x2='58' y2='69' stroke='%231e3a8a' stroke-width='0.8'/&gt;&lt;line x1='44.3' y1='63.3' x2='55.7' y2='74.7' stroke='%231e3a8a' stroke-width='0.8'/&gt;&lt;line x1='44.3' y1='74.7' x2='55.7' y2='63.3' stroke='%231e3a8a' stroke-width='0.8'/&gt;&lt;path d='M30 67 C28 65 24 66 23 70 C24 72 28 72 31 70 Z'/&gt;&lt;path d='M70 67 C72 65 76 66 77 70 C76 72 72 72 69 70 Z'/&gt;&lt;rect x='18' y='78' width='64' height='4' rx='1'/&gt;&lt;rect x='14' y='83' width='72' height='4.5' rx='1'/&gt;&lt;text x='50' y='98' font-family='sans-serif' font-size='7.5' font-weight='700' text-anchor='middle' fill='%231e3a8a' letter-spacing='0.5'&gt;सत्यमेव जयते&lt;/text&gt;&lt;/g&gt;&lt;/svg&gt;"/>
+<div aria-hidden="true" class="h-6 w-px bg-slate-200 hidden sm:block"></div>
+<img alt="Digital India Logo" class="h-8 w-auto object-contain hidden sm:block" src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 50' width='120' height='38' fill='none'&gt;&lt;path d='M8 32 C 14 20, 24 14, 34 22 C 44 30, 52 18, 58 10' stroke='%23FF9933' stroke-width='4.5' stroke-linecap='round'/&gt;&lt;circle cx='20' cy='18' r='3' fill='%23000080'/&gt;&lt;circle cx='34' cy='22' r='3' fill='%23000080'/&gt;&lt;circle cx='48' cy='18' r='3' fill='%23000080'/&gt;&lt;path d='M20 18 L34 22 L48 18' stroke='%23000080' stroke-width='1.5' stroke-dasharray='2 2'/&gt;&lt;path d='M12 39 C 20 28, 30 25, 40 33 C 48 39, 56 30, 62 24' stroke='%23138808' stroke-width='4' stroke-linecap='round'/&gt;&lt;text x='68' y='22' font-family='sans-serif' font-weight='900' font-size='14' fill='%230b2265' letter-spacing='-0.3'&gt;Digital India&lt;/text&gt;&lt;text x='68' y='34' font-family='sans-serif' font-weight='600' font-size='7' fill='%2364748b' letter-spacing='0.6'&gt;POWER TO EMPOWER&lt;/text&gt;&lt;/svg&gt;"/>
+</div>
+</div>
+<!-- Right: Functional Nav Elements -->
+<div class="flex items-center gap-3 sm:gap-6">
+<!-- Text Links -->
+<div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+<a class="text-navy-900 font-semibold hover:text-navy-800 transition-colors" data-i18n="home" href="#hero">Home</a>
+<a class="hover:text-navy-900 transition-colors" data-i18n="schemes" href="#schemes">Schemes</a>
+<a class="hover:text-navy-900 transition-colors" data-i18n="about" href="#about">About</a>
+</div>
+<button aria-label="Enable dark mode" class="dark-mode-toggle inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-slate-600 transition-all hover:border-slate-300 hover:bg-slate-100" id="dark-mode-toggle" title="Toggle dark mode" type="button">
+<svg class="h-4 w-4" fill="none" id="dark-mode-icon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Language Dropdown Pill -->
+<div class="relative" data-purpose="language-selector">
+<button aria-controls="language-menu" aria-expanded="false" class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200 hover:border-slate-300 text-slate-700 transition-all hover:bg-slate-100" id="language-toggle" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span id="selected-language">English</span>
+<svg class="w-3 h-3 text-slate-400 transition-transform" fill="none" id="language-chevron" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div aria-labelledby="language-toggle" class="hidden absolute right-0 mt-2 w-52 rounded-xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-200/60 z-50" id="language-menu" role="menu">
+<p class="px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-slate-400">Choose language</p>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-navy-900 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="English" role="menuitem" type="button"><span>English</span><span class="text-[11px] font-normal text-slate-400">English</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="हिंदी" role="menuitem" type="button"><span>हिंदी</span><span class="text-[11px] font-normal text-slate-400">Hindi</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="मराठी" role="menuitem" type="button"><span>मराठी</span><span class="text-[11px] font-normal text-slate-400">Marathi</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="भोजपुरी" role="menuitem" type="button"><span>भोजपुरी</span><span class="text-[11px] font-normal text-slate-400">Bhojpuri</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="தமிழ்" role="menuitem" type="button"><span>தமிழ்</span><span class="text-[11px] font-normal text-slate-400">Tamil</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="తెలుగు" role="menuitem" type="button"><span>తెలుగు</span><span class="text-[11px] font-normal text-slate-400">Telugu</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="മലയാളം" role="menuitem" type="button"><span>മലയാളം</span><span class="text-[11px] font-normal text-slate-400">Malayalam</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="ગુજરાતી" role="menuitem" type="button"><span>ગુજરાતી</span><span class="text-[11px] font-normal text-slate-400">Gujarati</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="ଓଡ଼ିଆ" role="menuitem" type="button"><span>ଓଡ଼ିଆ</span><span class="text-[11px] font-normal text-slate-400">Odia</span></button>
+<button class="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="বাংলা" role="menuitem" type="button"><span>বাংলা</span><span class="text-[11px] font-normal text-slate-400">Bengali</span></button>
+</div>
+</div>
+<!-- Ghost Sign In Button -->
+<a class="text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg border border-slate-300 hover:border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all duration-200" href="#signin">
+          Sign In
+        </a>
+</div>
+</nav>
+</header>
+<!-- END: Main Navigation -->
+<!-- BEGIN: Main Content Area -->
+<main class="flex-grow flex flex-col justify-between max-w-7xl mx-auto px-4 sm:px-8 pt-8 pb-12 w-full">
+<!-- BEGIN: Hero Section -->
+<section aria-labelledby="hero-title" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center py-4 lg:py-8" id="hero">
+<!-- Left Column (approx 60% / col-span-7) -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- Official Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/70 text-orange-800 text-xs font-semibold mb-6">
+<!-- Shield Icon -->
+<svg class="w-3.5 h-3.5 text-saffron-600" fill="currentColor" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11 14a1 1 0 11-2 0 1 1 0 012 0zm0-7a1 1 0 10-2 0v3a1 1 0 102 0V7z" fill-rule="evenodd"></path>
+</svg>
+<span data-i18n="badge">Government-Backed Financial Discovery Platform</span>
+</div>
+<!-- Confident National Headline -->
+<h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-navy-900 leading-[1.12] mb-5" data-i18n="headline" id="hero-title">
+          Find the Right Financial Assistance for Your Business.
+        </h1>
+<!-- Subtitle description -->
+<p class="text-base sm:text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl" data-i18n="description">
+          YOJANAX helps marginalized entrepreneurs discover suitable government-backed financial schemes based on their business, income, and funding requirements.
+        </p>
+<!-- CTA Action Row -->
+<div class="flex flex-wrap items-center gap-4 sm:gap-6 mb-8 w-full sm:w-auto">
+<!-- Primary Large CTA Button -->
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-navy-900 hover:bg-slate-900 text-white font-semibold text-base sm:text-lg px-8 py-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 group" href="#find-scheme">
+<span data-i18n="findScheme">Find My Scheme</span>
+<svg class="w-5 h-5 text-saffron-500 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</a>
+<!-- Subtle Secondary Text Link -->
+<a class="text-slate-600 hover:text-navy-900 font-medium text-base underline-offset-4 hover:underline transition-colors px-2 py-1" data-i18n="explore" href="#schemes">
+            Explore Schemes
+          </a>
+</div>
+<!-- Trust & Verification Bar -->
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 pt-4 border-t border-slate-200 text-xs sm:text-sm font-medium text-slate-500">
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span data-i18n="schemesCount">120+ Central &amp; State Schemes</span>
+</div>
+<span class="text-slate-300 hidden sm:inline">·</span>
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span data-i18n="dbt">100% Direct DBT Disbursal</span>
+</div>
+<span class="text-slate-300 hidden sm:inline">·</span>
+<div class="flex items-center gap-1.5">
+<svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span data-i18n="intermediaries">Zero Intermediaries</span>
+</div>
+</div>
+</div>
+<!-- Right Column (approx 40% / col-span-5) -->
+<div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+<!-- Framing Container for Provided Vector Art -->
+<div class="relative w-full max-w-md lg:max-w-none bg-white rounded-2xl p-3 sm:p-4 border border-slate-200/80 shadow-sm shadow-slate-100">
+<!-- Image Tag with https://lh3.googleusercontent.com/aida-public/AB6AXuCExKOtb4ZsavKFtbaF77gS_tOrKHvjeol7qAmvQtA6Q5jRWhxPByWXnoCf8Di4ugNH8sQHqaNTpcjMr7Os2wm-ztRfmx8qX9HUUPmTD_tILId5Ah7kAJJarMIGK-4WYPutSZtkKVeh-igS0kwhX5Af0s2X0CGXahqTjuQ7eC1heJQXYEeV30x4EZmJxba3MUO4ltokmVVGbpFCeJRdewcPYQUStVz1IOo8q_uuUKh8IBeaaPCkj-f7 -->
+<div class="overflow-hidden rounded-xl bg-slate-50 relative aspect-[4/3] flex items-center justify-center">
+<img alt="Modern clean vector illustration of an Indian entrepreneur smiling, standing next to modern subtle digital financial tech symbols" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCExKOtb4ZsavKFtbaF77gS_tOrKHvjeol7qAmvQtA6Q5jRWhxPByWXnoCf8Di4ugNH8sQHqaNTpcjMr7Os2wm-ztRfmx8qX9HUUPmTD_tILId5Ah7kAJJarMIGK-4WYPutSZtkKVeh-igS0kwhX5Af0s2X0CGXahqTjuQ7eC1heJQXYEeV30x4EZmJxba3MUO4ltokmVVGbpFCeJRdewcPYQUStVz1IOo8q_uuUKh8IBeaaPCkj-f7"/>
+</div>
+<!-- Floating Metric Chip 1: PMMY Mudra -->
+<div class="absolute -top-3 -left-3 sm:-left-4 bg-white/95 backdrop-blur border border-slate-200 px-3.5 py-2 rounded-xl shadow-md flex items-center gap-2.5 animate-float-slow">
+<div class="w-7 h-7 rounded-lg bg-orange-100 flex items-center justify-center shrink-0">
+<span class="text-orange-700 font-bold text-xs">₹</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Trending Featured Scheme</p>
+<p class="text-xs font-bold text-navy-900">PMMY · Mudra Loan Support</p>
+</div>
+</div>
+<!-- Floating Metric Chip 2: Subsidy Indicator -->
+<div class="absolute -bottom-3 -right-2 sm:-right-4 bg-white/95 backdrop-blur border border-slate-200 px-3.5 py-2 rounded-xl shadow-md flex items-center gap-2.5 animate-float-delayed">
+<div class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center shrink-0">
+<svg class="w-4 h-4 text-emerald-700" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Capital Assistance</p>
+<p class="text-xs font-bold text-emerald-700">Interest Subsidy up to 35%</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Trust Strip Section -->
+<section aria-label="Core Pillars of Service" class="mt-8 mb-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-50/70 border border-slate-200/90 rounded-2xl p-4 sm:p-5">
+<!-- Pillar 1 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-10 h-10 rounded-lg bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-saffron-600">
+<!-- Sliders / Precision target icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h2 class="text-sm font-bold text-navy-900" data-i18n="matching">Personalized Matching</h2>
+<p class="text-xs text-slate-500 mt-0.5 leading-relaxed" data-i18n="matchingText">Find schemes tailored to your trade, category, and capital requirements.</p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 text-navy-800">
+<!-- Shield with checkmark icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h2 class="text-sm font-bold text-navy-900" data-i18n="transparent">Simple &amp; Transparent</h2>
+<p class="text-xs text-slate-500 mt-0.5 leading-relaxed" data-i18n="transparentText">Know exactly why a scheme suits you with clear eligibility checks.</p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flex items-start gap-3.5 p-3 rounded-xl bg-white border border-slate-100 shadow-2xs">
+<div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 text-indiagreen-700">
+<!-- Bank / Landmark Location icon -->
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h2 class="text-sm font-bold text-navy-900" data-i18n="partners">Find Nearby Partners</h2>
+<p class="text-xs text-slate-500 mt-0.5 leading-relaxed" data-i18n="partnersText">Direct connection to nearest public sector banks and nodal centres.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Trust Strip Section -->
+<!-- BEGIN: Final Quick Action Card -->
+<section aria-labelledby="cta-heading" class="mt-4 mb-2">
+<div class="relative overflow-hidden bg-gradient-to-r from-navy-900 via-navy-800 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-md">
+<!-- Subtle saffron corner accent glow -->
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-orange-500/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-center md:text-left">
+<h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white" data-i18n="ctaHeading" id="cta-heading">
+              Ready to find the right scheme?
+            </h3>
+<p class="text-xs sm:text-sm text-slate-300 mt-1 max-w-xl" data-i18n="ctaText">
+              Answer few simple questions about your enterprise to get matched instantly. No registration fee required.
+            </p>
+</div>
+<div class="shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-saffron-500 hover:bg-saffron-600 text-white font-semibold text-sm sm:text-base px-7 py-3 rounded-xl transition-all duration-150 shadow hover:shadow-orange-500/25" href="#questionnaire">
+<span data-i18n="findScheme">Find My Scheme</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Final Quick Action Card -->
+</main>
+<!-- END: Main Content Area -->
+<!-- BEGIN: Minimal Footer -->
+<footer class="w-full border-t border-slate-200 bg-white py-6 px-4 sm:px-8 mt-auto">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+<!-- Footer Left: Brand & Motto -->
+<div class="flex items-center gap-3">
+<span class="font-extrabold text-navy-900 text-sm tracking-tight">YOJAN<span class="text-saffron-500">X</span></span>
+<span class="text-slate-300">|</span>
+<span data-i18n="footerText">Making government financial support easier to discover.</span>
+</div>
+<!-- Footer Center/Right: Compliance Links -->
+<nav aria-label="Legal and Assistance Links" class="flex items-center gap-4 text-xs">
+<a class="hover:text-navy-900 transition-colors" data-i18n="privacy" href="#privacy">Privacy</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-navy-900 transition-colors" data-i18n="terms" href="#terms">Terms</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-navy-900 transition-colors" data-i18n="contact" href="#contact">Contact</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-navy-900 transition-colors" data-i18n="accessibility" href="#accessibility">Accessibility</a>
+</nav>
+<!-- Copyright Tag -->
+<div class="text-[11px] text-slate-400">
+         &copy; 2026 YOJANAX. Government of India Initiative.
+      </div>
+</div>
+</footer>
+<!-- END: Minimal Footer -->
+<script>
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const darkModeIcon = document.getElementById('dark-mode-icon');
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let darkModeEnabled = localStorage.getItem('yojanax-dark-mode') === 'true' || (!localStorage.getItem('yojanax-dark-mode') && prefersDarkMode);
+
+  function updateDarkMode() {
+    document.body.classList.toggle('dark-mode', darkModeEnabled);
+    darkModeToggle.setAttribute('aria-label', darkModeEnabled ? 'Disable dark mode' : 'Enable dark mode');
+    darkModeToggle.setAttribute('title', darkModeEnabled ? 'Switch to light mode' : 'Switch to dark mode');
+    darkModeIcon.innerHTML = darkModeEnabled
+      ? '<path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.36-6.36l-1.42 1.42M7.05 16.95l-1.42 1.42m12.73 0l-1.42-1.42M7.05 7.05L5.63 5.63M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>'
+      : '<path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>';
+  }
+
+  updateDarkMode();
+
+  darkModeToggle.addEventListener('click', () => {
+    darkModeEnabled = !darkModeEnabled;
+    localStorage.setItem('yojanax-dark-mode', String(darkModeEnabled));
+    updateDarkMode();
+  });
+
+  const languageSelector = document.querySelector('[data-purpose="language-selector"]');
+  const languageToggle = document.getElementById('language-toggle');
+  const languageMenu = document.getElementById('language-menu');
+  const selectedLanguage = document.getElementById('selected-language');
+  const languageChevron = document.getElementById('language-chevron');
+  const translatableElements = document.querySelectorAll('[data-i18n]');
+  const originalText = {};
+
+  translatableElements.forEach((element) => {
+    originalText[element.dataset.i18n] = element.textContent.trim();
+  });
+
+  const translations = {
+    English: {},
+    'हिंदी': {
+      home: 'होम', schemes: 'योजनाएं', about: 'हमारे बारे में', badge: 'सरकार समर्थित वित्तीय खोज मंच',
+      headline: 'अपने व्यवसाय के लिए सही वित्तीय सहायता पाएं।', description: 'YOJANAX हाशिए पर रहने वाले उद्यमियों को उनके व्यवसाय, आय और वित्तीय जरूरतों के आधार पर उपयुक्त सरकारी योजनाएं खोजने में मदद करता है।',
+      findScheme: 'मेरी योजना खोजें', explore: 'योजनाएं देखें', schemesCount: '120+ केंद्रीय और राज्य योजनाएं', dbt: '100% प्रत्यक्ष DBT वितरण', intermediaries: 'कोई बिचौलिया नहीं',
+      matching: 'व्यक्तिगत मिलान', matchingText: 'अपने व्यापार, श्रेणी और पूंजी की जरूरतों के अनुसार योजनाएं खोजें।', transparent: 'सरल और पारदर्शी', transparentText: 'स्पष्ट पात्रता जांच के साथ जानें कि कौन सी योजना आपके लिए सही है।',
+      partners: 'नजदीकी साझेदार खोजें', partnersText: 'नजदीकी सार्वजनिक क्षेत्र के बैंकों और नोडल केंद्रों से सीधा संपर्क।', ctaHeading: 'सही योजना खोजने के लिए तैयार हैं?', ctaText: 'अपने उद्यम के बारे में कुछ आसान सवालों के जवाब दें और तुरंत योजना पाएं। कोई पंजीकरण शुल्क नहीं।',
+      footerText: 'सरकारी वित्तीय सहायता खोजना आसान बनाना।', privacy: 'गोपनीयता', terms: 'नियम', contact: 'संपर्क', accessibility: 'सुलभता'
+    },
+    'मराठी': {
+      home: 'मुख्यपृष्ठ', schemes: 'योजना', about: 'आमच्याबद्दल', badge: 'सरकार समर्थित आर्थिक शोध मंच', headline: 'तुमच्या व्यवसायासाठी योग्य आर्थिक मदत शोधा।', description: 'YOJANAX उद्योजकांना त्यांच्या व्यवसाय, उत्पन्न आणि निधीच्या गरजेनुसार योग्य सरकारी योजना शोधण्यात मदत करते।', findScheme: 'माझी योजना शोधा', explore: 'योजना पहा', schemesCount: '120+ केंद्र आणि राज्य योजना', dbt: '100% थेट DBT वितरण', intermediaries: 'कोणतेही मध्यस्थ नाहीत', matching: 'वैयक्तिक जुळणी', matchingText: 'तुमच्या व्यवसाय, श्रेणी आणि भांडवलाच्या गरजेनुसार योजना शोधा।', transparent: 'सोपे आणि पारदर्शक', transparentText: 'स्पष्ट पात्रता तपासणीसह तुमच्यासाठी योग्य योजना जाणून घ्या।', partners: 'जवळचे भागीदार शोधा', partnersText: 'जवळच्या सार्वजनिक क्षेत्रातील बँका आणि नोडल केंद्रांशी थेट संपर्क।', ctaHeading: 'योग्य योजना शोधण्यासाठी तयार आहात?', ctaText: 'तुमच्या उद्योगाबद्दल काही सोप्या प्रश्नांची उत्तरे द्या आणि त्वरित योजना मिळवा। नोंदणी शुल्क नाही।', footerText: 'सरकारी आर्थिक मदत शोधणे सोपे करणे।', privacy: 'गोपनीयता', terms: 'अटी', contact: 'संपर्क', accessibility: 'सुलभता'
+    },
+    'भोजपुरी': {
+      home: 'होम', schemes: 'योजना', about: 'हमनी के बारे में', badge: 'सरकार से समर्थित वित्तीय खोज मंच', headline: 'अपना कारोबार खातिर सही आर्थिक मदद पाईं।', description: 'YOJANAX कारोबार, आमदनी आ पूंजी के जरूरत के हिसाब से सही सरकारी योजना खोजे में उद्यमी लोग के मदद करेला।', findScheme: 'हमार योजना खोजीं', explore: 'योजना देखीं', schemesCount: '120+ केंद्र आ राज्य योजना', dbt: '100% सीधा DBT भुगतान', intermediaries: 'कवनो बिचौलिया ना', matching: 'आपके हिसाब से मिलान', matchingText: 'आपन कारोबार, श्रेणी आ पूंजी के जरूरत के हिसाब से योजना खोजीं।', transparent: 'सहज आ पारदर्शी', transparentText: 'साफ पात्रता जांच से जानीं कि कवन योजना रउरा खातिर सही बा।', partners: 'नजदीकी साझेदार खोजीं', partnersText: 'नजदीकी सरकारी बैंक आ नोडल केंद्र से सीधा संपर्क।', ctaHeading: 'सही योजना खोजे खातिर तैयार बानी?', ctaText: 'अपना कारोबार के बारे में कुछ आसान सवाल के जवाब दीं आ तुरंत योजना पाईं। पंजीकरण शुल्क नइखे।', footerText: 'सरकारी आर्थिक मदद खोजल आसान बनावल।', privacy: 'गोपनीयता', terms: 'नियम', contact: 'संपर्क', accessibility: 'सुगमता'
+    },
+    'தமிழ்': {
+      home: 'முகப்பு', schemes: 'திட்டங்கள்', about: 'எங்களைப் பற்றி', badge: 'அரசு ஆதரவு நிதி தேடல் தளம்', headline: 'உங்கள் தொழிலுக்கு சரியான நிதி உதவியைப் பெறுங்கள்.', description: 'உங்கள் தொழில், வருமானம் மற்றும் நிதித் தேவைகளின் அடிப்படையில் பொருத்தமான அரசு திட்டங்களைக் கண்டறிய YOJANAX உதவுகிறது.', findScheme: 'என் திட்டத்தைக் கண்டறி', explore: 'திட்டங்களைப் பார்க்கவும்', schemesCount: '120+ மத்திய மற்றும் மாநில திட்டங்கள்', dbt: '100% நேரடி DBT வழங்கல்', intermediaries: 'இடைத்தரகர்கள் இல்லை', matching: 'தனிப்பயன் பொருத்தம்', matchingText: 'உங்கள் தொழில், வகை மற்றும் மூலதனத் தேவைகளுக்கு ஏற்ற திட்டங்களைக் கண்டறியவும்.', transparent: 'எளிமையானதும் வெளிப்படையானதும்', transparentText: 'தெளிவான தகுதி சரிபார்ப்புடன் உங்களுக்கு ஏற்ற திட்டத்தை அறியவும்.', partners: 'அருகிலுள்ள கூட்டாளர்களைக் கண்டறியவும்', partnersText: 'அருகிலுள்ள பொதுத்துறை வங்கிகள் மற்றும் மையங்களுடன் நேரடி தொடர்பு.', ctaHeading: 'சரியான திட்டத்தைக் கண்டறிய தயாரா?', ctaText: 'உங்கள் நிறுவனத்தைப் பற்றிய சில எளிய கேள்விகளுக்குப் பதிலளித்து உடனடியாக பொருத்தமான திட்டத்தைப் பெறுங்கள்.', footerText: 'அரசு நிதி ஆதரவைக் கண்டறிவதை எளிதாக்குதல்.', privacy: 'தனியுரிமை', terms: 'விதிமுறைகள்', contact: 'தொடர்பு', accessibility: 'அணுகல்தன்மை'
+    },
+    'తెలుగు': {
+      home: 'హోమ్', schemes: 'పథకాలు', about: 'మా గురించి', badge: 'ప్రభుత్వ మద్దతు ఆర్థిక శోధన వేదిక', headline: 'మీ వ్యాపారానికి సరైన ఆర్థిక సహాయం పొందండి.', description: 'మీ వ్యాపారం, ఆదాయం మరియు నిధుల అవసరాల ఆధారంగా తగిన ప్రభుత్వ పథకాలను కనుగొనడంలో YOJANAX సహాయపడుతుంది.', findScheme: 'నా పథకాన్ని కనుగొనండి', explore: 'పథకాలను చూడండి', schemesCount: '120+ కేంద్ర మరియు రాష్ట్ర పథకాలు', dbt: '100% ప్రత్యక్ష DBT పంపిణీ', intermediaries: 'మధ్యవర్తులు లేరు', matching: 'వ్యక్తిగత సరిపోలిక', matchingText: 'మీ వ్యాపారం, వర్గం మరియు మూలధన అవసరాలకు తగిన పథకాలను కనుగొనండి.', transparent: 'సరళమైనది మరియు పారదర్శకమైనది', transparentText: 'స్పష్టమైన అర్హత తనిఖీలతో మీకు సరిపోయే పథకాన్ని తెలుసుకోండి.', partners: 'దగ్గరి భాగస్వాములను కనుగొనండి', partnersText: 'దగ్గరి ప్రభుత్వ రంగ బ్యాంకులు మరియు కేంద్రాలతో ప్రత్యక్ష సంబంధం.', ctaHeading: 'సరైన పథకాన్ని కనుగొనడానికి సిద్ధంగా ఉన్నారా?', ctaText: 'మీ సంస్థ గురించి కొన్ని సులభమైన ప్రశ్నలకు సమాధానం ఇవ్వండి మరియు వెంటనే పథకాన్ని పొందండి.', footerText: 'ప్రభుత్వ ఆర్థిక సహాయాన్ని కనుగొనడం సులభతరం చేయడం.', privacy: 'గోప్యత', terms: 'నిబంధనలు', contact: 'సంప్రదించండి', accessibility: 'అందుబాటు'
+    },
+    'മലയാളം': {
+      home: 'ഹോം', schemes: 'പദ്ധതികൾ', about: 'ഞങ്ങളെക്കുറിച്ച്', badge: 'സർക്കാർ പിന്തുണയുള്ള സാമ്പത്തിക തിരച്ചിൽ വേദി', headline: 'നിങ്ങളുടെ ബിസിനസിന് ശരിയായ സാമ്പത്തിക സഹായം കണ്ടെത്തൂ.', description: 'നിങ്ങളുടെ ബിസിനസ്, വരുമാനം, ധനസഹായ ആവശ്യങ്ങൾ എന്നിവയുടെ അടിസ്ഥാനത്തിൽ അനുയോജ്യമായ സർക്കാർ പദ്ധതികൾ കണ്ടെത്താൻ YOJANAX സഹായിക്കുന്നു.', findScheme: 'എന്റെ പദ്ധതി കണ്ടെത്തുക', explore: 'പദ്ധതികൾ കാണുക', schemesCount: '120+ കേന്ദ്ര, സംസ്ഥാന പദ്ധതികൾ', dbt: '100% നേരിട്ടുള്ള DBT വിതരണം', intermediaries: 'ഇടനിലക്കാരില്ല', matching: 'വ്യക്തിഗത പൊരുത്തം', matchingText: 'നിങ്ങളുടെ വ്യാപാരം, വിഭാഗം, മൂലധന ആവശ്യങ്ങൾ എന്നിവയ്ക്ക് അനുയോജ്യമായ പദ്ധതികൾ കണ്ടെത്തുക.', transparent: 'ലളിതവും സുതാര്യവും', transparentText: 'വ്യക്തമായ യോഗ്യതാ പരിശോധനയിലൂടെ നിങ്ങൾക്ക് അനുയോജ്യമായ പദ്ധതി കണ്ടെത്തുക.', partners: 'സമീപത്തുള്ള പങ്കാളികളെ കണ്ടെത്തുക', partnersText: 'സമീപത്തുള്ള പൊതുമേഖലാ ബാങ്കുകളുമായും കേന്ദ്രങ്ങളുമായും നേരിട്ടുള്ള ബന്ധം.', ctaHeading: 'ശരിയായ പദ്ധതി കണ്ടെത്താൻ തയ്യാറാണോ?', ctaText: 'നിങ്ങളുടെ സ്ഥാപനത്തെക്കുറിച്ചുള്ള കുറച്ച് ലളിതമായ ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകി ഉടൻ പദ്ധതി കണ്ടെത്തൂ.', footerText: 'സർക്കാർ സാമ്പത്തിക സഹായം കണ്ടെത്തുന്നത് എളുപ്പമാക്കുന്നു.', privacy: 'സ്വകാര്യത', terms: 'നിബന്ധനകൾ', contact: 'ബന്ധപ്പെടുക', accessibility: 'പ്രവേശനക്ഷമത'
+    },
+    'ગુજરાતી': {
+      home: 'હોમ', schemes: 'યોજનાઓ', about: 'અમારા વિશે', badge: 'સરકાર સમર્થિત નાણાકીય શોધ પ્લેટફોર્મ', headline: 'તમારા વ્યવસાય માટે યોગ્ય નાણાકીય સહાય મેળવો.', description: 'તમારા વ્યવસાય, આવક અને ભંડોળની જરૂરિયાતોના આધારે યોગ્ય સરકારી યોજનાઓ શોધવામાં YOJANAX મદદ કરે છે.', findScheme: 'મારી યોજના શોધો', explore: 'યોજનાઓ જુઓ', schemesCount: '120+ કેન્દ્ર અને રાજ્ય યોજનાઓ', dbt: '100% સીધી DBT ચુકવણી', intermediaries: 'કોઈ વચેટિયા નથી', matching: 'વ્યક્તિગત મેળ', matchingText: 'તમારા વ્યવસાય, શ્રેણી અને મૂડીની જરૂરિયાતોને અનુરૂપ યોજનાઓ શોધો.', transparent: 'સરળ અને પારદર્શક', transparentText: 'સ્પષ્ટ પાત્રતા તપાસ સાથે તમારા માટે યોગ્ય યોજના જાણો.', partners: 'નજીકના ભાગીદારો શોધો', partnersText: 'નજીકની જાહેર ક્ષેત્રની બેંકો અને કેન્દ્રો સાથે સીધો સંપર્ક.', ctaHeading: 'યોગ્ય યોજના શોધવા તૈયાર છો?', ctaText: 'તમારા ઉદ્યોગ વિશે થોડા સરળ પ્રશ્નોના જવાબ આપો અને તરત યોજના મેળવો.', footerText: 'સરકારી નાણાકીય સહાય શોધવાનું સરળ બનાવવું.', privacy: 'ગોપનીયતા', terms: 'શરતો', contact: 'સંપર્ક', accessibility: 'સુલભતા'
+    },
+    'ଓଡ଼ିଆ': {
+      home: 'ହୋମ', schemes: 'ଯୋଜନା', about: 'ଆମ ବିଷୟରେ', badge: 'ସରକାରୀ ସମର୍ଥିତ ଆର୍ଥିକ ସନ୍ଧାନ ମଞ୍ଚ', headline: 'ଆପଣଙ୍କ ବ୍ୟବସାୟ ପାଇଁ ଉପଯୁକ୍ତ ଆର୍ଥିକ ସହାୟତା ପାଆନ୍ତୁ।', description: 'ଆପଣଙ୍କ ବ୍ୟବସାୟ, ଆୟ ଏବଂ ପାଣ୍ଠି ଆବଶ୍ୟକତା ଅନୁଯାୟୀ ଉପଯୁକ୍ତ ସରକାରୀ ଯୋଜନା ଖୋଜିବାରେ YOJANAX ସାହାଯ୍ୟ କରେ।', findScheme: 'ମୋ ଯୋଜନା ଖୋଜନ୍ତୁ', explore: 'ଯୋଜନା ଦେଖନ୍ତୁ', schemesCount: '120+ କେନ୍ଦ୍ର ଏବଂ ରାଜ୍ୟ ଯୋଜନା', dbt: '100% ସିଧାସଳଖ DBT ବଣ୍ଟନ', intermediaries: 'କୌଣସି ମଧ୍ୟସ୍ଥ ନାହାନ୍ତି', matching: 'ବ୍ୟକ୍ତିଗତ ମେଳ', matchingText: 'ଆପଣଙ୍କ ବ୍ୟବସାୟ, ବର୍ଗ ଏବଂ ପୁଞ୍ଜି ଆବଶ୍ୟକତା ଅନୁଯାୟୀ ଯୋଜନା ଖୋଜନ୍ତୁ।', transparent: 'ସରଳ ଏବଂ ସ୍ୱଚ୍ଛ', transparentText: 'ସ୍ପଷ୍ଟ ଯୋଗ୍ୟତା ଯାଞ୍ଚ ସହିତ ଆପଣଙ୍କ ପାଇଁ ଉପଯୁକ୍ତ ଯୋଜନା ଜାଣନ୍ତୁ।', partners: 'ନିକଟସ୍ଥ ଭାଗୀଦାର ଖୋଜନ୍ତୁ', partnersText: 'ନିକଟସ୍ଥ ସରକାରୀ ବ୍ୟାଙ୍କ ଏବଂ କେନ୍ଦ୍ର ସହିତ ସିଧାସଳଖ ସମ୍ପର୍କ।', ctaHeading: 'ସଠିକ ଯୋଜନା ଖୋଜିବାକୁ ପ୍ରସ୍ତୁତ?', ctaText: 'ଆପଣଙ୍କ ଉଦ୍ୟୋଗ ବିଷୟରେ କିଛି ସରଳ ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଅନ୍ତୁ ଏବଂ ତୁରନ୍ତ ଯୋଜନା ପାଆନ୍ତୁ।', footerText: 'ସରକାରୀ ଆର୍ଥିକ ସହାୟତା ଖୋଜିବାକୁ ସହଜ କରିବା।', privacy: 'ଗୋପନୀୟତା', terms: 'ନିୟମ', contact: 'ଯୋଗାଯୋଗ', accessibility: 'ସୁଗମତା'
+    },
+    'বাংলা': {
+      home: 'হোম', schemes: 'প্রকল্পসমূহ', about: 'আমাদের সম্পর্কে', badge: 'সরকার সমর্থিত আর্থিক অনুসন্ধান প্ল্যাটফর্ম', headline: 'আপনার ব্যবসার জন্য সঠিক আর্থিক সহায়তা পান।', description: 'আপনার ব্যবসা, আয় এবং অর্থায়নের প্রয়োজনের ভিত্তিতে উপযুক্ত সরকারি প্রকল্প খুঁজে পেতে YOJANAX সাহায্য করে।', findScheme: 'আমার প্রকল্প খুঁজুন', explore: 'প্রকল্প দেখুন', schemesCount: '১২০+ কেন্দ্রীয় ও রাজ্য প্রকল্প', dbt: '১০০% সরাসরি DBT বিতরণ', intermediaries: 'কোনও মধ্যস্থতাকারী নেই', matching: 'ব্যক্তিগত মিল', matchingText: 'আপনার ব্যবসা, শ্রেণি এবং মূলধনের প্রয়োজন অনুযায়ী প্রকল্প খুঁজুন।', transparent: 'সহজ ও স্বচ্ছ', transparentText: 'স্পষ্ট যোগ্যতা যাচাইয়ের মাধ্যমে আপনার জন্য উপযুক্ত প্রকল্প জানুন।', partners: 'কাছের অংশীদার খুঁজুন', partnersText: 'কাছের সরকারি ব্যাঙ্ক ও কেন্দ্রের সঙ্গে সরাসরি যোগাযোগ।', ctaHeading: 'সঠিক প্রকল্প খুঁজতে প্রস্তুত?', ctaText: 'আপনার উদ্যোগ সম্পর্কে কয়েকটি সহজ প্রশ্নের উত্তর দিন এবং সঙ্গে সঙ্গে প্রকল্প পান।', footerText: 'সরকারি আর্থিক সহায়তা খুঁজে পাওয়া সহজ করা।', privacy: 'গোপনীয়তা', terms: 'শর্তাবলি', contact: 'যোগাযোগ', accessibility: 'অ্যাক্সেসিবিলিটি'
+    }
+  };
+
+  function applyLanguage(language) {
+    const languagePack = translations[language] || translations.English;
+    translatableElements.forEach((element) => {
+      const key = element.dataset.i18n;
+      element.textContent = languagePack[key] || originalText[key];
+    });
+    selectedLanguage.textContent = language === 'English' ? 'English / हिंदी' : language;
+    document.documentElement.lang = language === 'English' ? 'en' : 'hi';
+  }
+
+  function setLanguageMenu(open) {
+    languageMenu.classList.toggle('hidden', !open);
+    languageToggle.setAttribute('aria-expanded', String(open));
+    languageChevron.classList.toggle('rotate-180', open);
+  }
+
+  languageToggle.addEventListener('click', () => {
+    setLanguageMenu(languageMenu.classList.contains('hidden'));
+  });
+
+  languageMenu.querySelectorAll('.language-option').forEach((option) => {
+    option.addEventListener('click', () => {
+      applyLanguage(option.dataset.language);
+      setLanguageMenu(false);
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!languageSelector.contains(event.target)) setLanguageMenu(false);
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      setLanguageMenu(false);
+      languageToggle.focus();
+    }
+  });
+</script>
+</body></html>
