@@ -5,23 +5,23 @@ const calculatorCopy = {
     back: ' Back to Scheme',
     eyebrow: 'YOJANAX · Financial Calculator',
     heading: 'EMI & Repayment Calculator',
-    subtitle: 'Estimate your monthly EMI, total interest, and repayment for government-backed loan schemes. Adjust the sliders below to match your requirements accordingly. ',
+    subtitle: 'Enter the interest rate provided by your lender to calculate your monthly EMI, total interest, and total payable amount. ',
     controlsTitle: 'Loan Parameters',
-    controlsDesc: 'Drag or type to adjust values',
+    controlsDesc: 'Enter the lender-provided interest rate and select the loan tenure.',
     loanAmount: 'Loan Amount',
-    interestRate: 'Interest Rate (p.a.)',
+    interestRate: 'Bank-provided Interest Rate (p.a.)',
     tenureMonths: 'Loan Tenure',
     months: 'months',
-    disclaimer: '⚠️ This is an estimate based on the selected scheme. Final repayment may vary based on lender-specific terms and charges. Parameters above may or may not match respective scheme details.', resultEyebrow: 'Estimate Ready',
+    disclaimer: '⚠️ Enter the interest rate provided by your lender. This calculator provides an estimate of EMI, total interest, and total payable amount. Final repayment may vary based on lender-specific terms and charges.', resultEyebrow: 'Estimate Ready',
     resultTitle: 'Repayment Breakdown',
-    demoBadge: 'Scheme Estimate',
+    demoBadge: 'Loan Calculation',
     totalPayable: 'Total Payable',
-    demoEstimate: 'based on selected Scheme estimate',
+    demoEstimate: 'based on the entered lender rate',
     principalAmount: 'Principal',
     interestAmount: 'Interest',
     estimatedEmi: 'Estimated Monthly EMI',
     perMonth: '/ month',
-    calculateBtn: 'Apply Now',
+   
     totalRepayment: 'Total Repayment',
     totalInterest: 'Total Interest',
     rateLabel: 'Interest Rate',
@@ -35,20 +35,20 @@ const calculatorCopy = {
     controlsTitle: 'ऋण मापदंड',
     controlsDesc: 'मान बदलने के लिए खिसकाएं या टाइप करें',
     loanAmount: 'ऋण राशि',
-    interestRate: 'ब्याज दर (प्रति वर्ष)',
+    interestRate: 'बैंक द्वारा दी गई ब्याज दर (प्रति वर्ष)',
     tenureMonths: 'ऋण अवधि',
     months: 'महीने',
     disclaimer: '⚠️ यह चयनित योजना के आधार पर एक अनुमान है। अंतिम पुनर्भुगतान ऋणदाता की शर्तों और शुल्क के अनुसार अलग हो सकता है।',
     resultEyebrow: 'अनुमान तैयार',
     resultTitle: 'पुनर्भुगतान विवरण',
-    demoBadge: 'योजना अनुमान',
+    demoBadge: 'ऋण गणना',
     totalPayable: 'कुल देय',
-    demoEstimate: 'चयनित योजना के आधार पर',
+    demoEstimate: 'दर्ज की गई बैंक ब्याज दर के आधार पर',
     principalAmount: 'मूलधन',
     interestAmount: 'ब्याज',
     estimatedEmi: 'अनुमानित मासिक EMI',
     perMonth: '/ माह',
-    calculateBtn: 'अभी आवेदन करें',
+    
     totalRepayment: 'कुल पुनर्भुगतान',
     totalInterest: 'कुल ब्याज',
     rateLabel: 'ब्याज दर',
@@ -57,8 +57,7 @@ const calculatorCopy = {
 };
 
 const calculatorConfig = {
-  loanAmount: { min: 50000, max: 1000000, step: 5000, initial: 250000 },
-  interestRate: { min: 1, max: 20, step: 0.1, initial: 10.5 },
+  interestRate: { min: 1, max: 20, step: 0.1, initial: 1 },
   tenureMonths: { min: 6, max: 84, step: 1, initial: 36 },
 };
 
@@ -160,11 +159,14 @@ function SliderControl({ label, value, min, max, step, suffix, onChange, monthsT
   );
 }
 
-export default function Calculator({ onBack, language = 'English', scheme }) {
-  const [loanAmount, setLoanAmount] = useState(calculatorConfig.loanAmount.initial);
+export default function Calculator({ onBack, language = 'English', scheme, answers }) {
   const [interestRate, setInterestRate] = useState(calculatorConfig.interestRate.initial);
   const [tenureMonths, setTenureMonths] = useState(calculatorConfig.tenureMonths.initial);
 
+  const rawAmount = answers?.formData?.financialAssistance || answers?.formData?.projectCost || answers?.formData?.course_fee_inr || 0;
+  const loanAmount = Number(String(rawAmount).replace(/,/g, '')) || 0;
+
+  
   const copy = calculatorCopy[language] ?? calculatorCopy.English;
   const selectedSchemeName =
     scheme?.scheme_name ?? scheme?.name ?? 'Selected Scheme';
@@ -183,7 +185,7 @@ export default function Calculator({ onBack, language = 'English', scheme }) {
     };
   }, [interestRate, loanAmount, tenureMonths]);
 
-  const setAmount = (value) => setLoanAmount(clamp(parseInput(value, loanAmount), calculatorConfig.loanAmount.min, calculatorConfig.loanAmount.max));
+  
   const setRate = (value) => setInterestRate(clamp(parseInput(value, interestRate), calculatorConfig.interestRate.min, calculatorConfig.interestRate.max));
   const setTenure = (value) => setTenureMonths(clamp(Math.round(parseInput(value, tenureMonths)), calculatorConfig.tenureMonths.min, calculatorConfig.tenureMonths.max));
 
@@ -214,8 +216,9 @@ export default function Calculator({ onBack, language = 'English', scheme }) {
               <p className="mt-1 text-sm text-slate-500">{copy.controlsDesc}</p>
             </div>
             <div className="space-y-7">
-              <SliderControl label={copy.loanAmount} value={loanAmount} min={calculatorConfig.loanAmount.min} max={calculatorConfig.loanAmount.max} step={calculatorConfig.loanAmount.step} suffix="₹" onChange={setAmount} />
+              
               <SliderControl label={copy.interestRate} value={interestRate} min={calculatorConfig.interestRate.min} max={calculatorConfig.interestRate.max} step={calculatorConfig.interestRate.step} suffix="%" onChange={setRate} />
+
               <SliderControl label={copy.tenureMonths} value={tenureMonths} min={calculatorConfig.tenureMonths.min} max={calculatorConfig.tenureMonths.max} step={calculatorConfig.tenureMonths.step} suffix="months" monthsText={copy.months} onChange={setTenure} />
             </div>
             <div className="mt-8 rounded-xl border border-orange-100 bg-orange-50/70 p-4 text-xs leading-relaxed text-slate-600">

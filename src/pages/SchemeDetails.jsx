@@ -86,55 +86,108 @@ export default function SchemeDetails({ scheme, answers, onBack, onCalculate, on
   const casteCertificateReady =
     form.caste_certificate_valid === 'Yes';
 
-  const gapItems = [
-    {
-      name: 'Udyam Registration',
-      status: 'Not verified',
-    },
-    {
-      name: 'Bank Account Details',
-      status: 'Not verified',
-    },
-    {
-      name: 'Business Information',
-      status: hasBusinessInfo ? 'Profile info provided' : 'Not provided',
-    },
-  ];
+    const isEducationScheme = apiScheme?.scheme_id === 'ELS';
 
-  const documentItems = [
-    {
-      name: 'Aadhaar',
-      status: 'Not verified',
-    },
-    {
-      name: 'PAN',
-      status: 'Not verified',
-    },
-    {
-      name: 'Caste Certificate',
-      status: casteCertificateReady ? 'Provided' : 'Not verified',
-    },
-    {
-      name: 'Bank Statement',
-      status: 'Not verified',
-    },
-    {
-      name: 'Business Registration',
-      status: 'Not verified',
-    },
-  ];
+  const gapItems = isEducationScheme
+  ? [
+      {
+        name: 'Caste Certificate',
+        status: casteCertificateReady ? 'Provided' : 'Not verified',
+      },
+      {
+        name: 'Course Information',
+        status: form.course_type ? 'Profile info provided' : 'Not provided',
+      },
+      {
+        name: 'Recognized Institution',
+        status: form.institution_recognized === 'Yes'
+          ? 'Provided'
+          : 'Not verified',
+      },
+    ]
+  : [
+      {
+        name: 'Udyam Registration',
+        status: 'Not verified',
+      },
+      {
+        name: 'Bank Account Details',
+        status: 'Not verified',
+      },
+      {
+        name: 'Business Information',
+        status: hasBusinessInfo ? 'Profile info provided' : 'Not provided',
+      },
+    ];
 
-  const readinessItems = [
-    hasBusinessInfo,
-    casteCertificateReady,
-    false, // Aadhaar not verified
-    false, // PAN not verified
-    false, // Bank statement not verified
-  ];
+  const documentItems = isEducationScheme
+  ? [
+      {
+        name: 'Aadhaar',
+        status: 'Not verified',
+      },
+      {
+        name: 'PAN',
+        status: 'Not verified',
+      },
+      {
+        name: 'Caste Certificate',
+        status: casteCertificateReady ? 'Provided' : 'Not verified',
+      },
+      {
+        name: 'Course Information',
+        status: form.course_type ? 'Provided' : 'Not verified',
+      },
+      {
+        name: 'Institution Recognition',
+        status: form.institution_recognized === 'Yes'
+          ? 'Provided'
+          : 'Not verified',
+      },
+    ]
+  : [
+      {
+        name: 'Aadhaar',
+        status: 'Not verified',
+      },
+      {
+        name: 'PAN',
+        status: 'Not verified',
+      },
+      {
+        name: 'Caste Certificate',
+        status: casteCertificateReady ? 'Provided' : 'Not verified',
+      },
+      {
+        name: 'Bank Statement',
+        status: 'Not verified',
+      },
+      {
+        name: 'Business Registration',
+        status: 'Not verified',
+      },
+    ];
+
+ const readinessItems = isEducationScheme
+  ? [
+      casteCertificateReady,
+      Boolean(form.course_type),
+      form.institution_recognized === 'Yes',
+      false, // Aadhaar not verified
+      false, // PAN not verified
+    ]
+  : [
+      hasBusinessInfo,
+      casteCertificateReady,
+      false, // Aadhaar not verified
+      false, // PAN not verified
+      false, // Bank statement not verified
+    ];
 
   const readinessScore = Math.round(
-    (readinessItems.filter(Boolean).length / readinessItems.length) * 100
-  );
+  (gapItems.filter((item) => item.status === 'Provided' || item.status === 'Profile info provided').length /
+    gapItems.length) * 100
+); 
 
   useEffect(() => {
     const loadScheme = async () => {

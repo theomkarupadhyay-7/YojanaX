@@ -665,6 +665,7 @@ export default function App() {
           <Calculator
             language={language}
             scheme={selectedScheme}
+              answers={questionnaireAnswers}
             onBack={() => setShowCalculator(false)} />
         ) : selectedScheme ? (
           <SchemeDetails
