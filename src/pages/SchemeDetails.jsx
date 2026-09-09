@@ -145,7 +145,7 @@ export default function SchemeDetails({ scheme, answers, onBack, onCalculate, on
 
       try {
         const response = await fetch(
-          `http://127.0.0.1:8000/schemes/${scheme.scheme_id}`
+          `https://yojanax.onrender.com/schemes/${scheme.scheme_id}`
         );
 
         if (!response.ok) {

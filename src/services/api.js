@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://yojanax.onrender.com';
 
 export async function checkEligibility(payload) {
   try {

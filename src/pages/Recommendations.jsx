@@ -90,7 +90,7 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
       setApiError('');
 
       try {
-        const response = await fetch('http://127.0.0.1:8000/recommendations', {
+        const response = await fetch('https://yojanax.onrender.com/recommendations', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
