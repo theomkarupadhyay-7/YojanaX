@@ -109,7 +109,7 @@ export default function Questionnaire({ onBackToHome, onFindSchemes, language = 
           ) : (
             <>
               <h2 className="mb-6 text-2xl font-bold text-navy-900">
-                <span className="text-saffron-500">1.</span> {supportType ? steps[currentStep - 1] : 'What kind of support are you looking for?'}
+                <span className="text-saffron-500">  {currentStep}. </span> {supportType ? steps[currentStep - 1] : 'What kind of support are you looking for?'}
               </h2>
               {supportType ? (
                 isEducation ? educationStep() : businessStep()

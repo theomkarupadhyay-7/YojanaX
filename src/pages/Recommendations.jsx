@@ -224,7 +224,9 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
                         {scheme.match_score}% {copy.match}
                       </span>
                     </div>
-                    <h2 className="text-xl font-bold text-navy-900 sm:text-2xl">{scheme.scheme_name}</h2>
+                    <h2 className="text-xl font-bold text-navy-900 sm:text-2xl">{scheme.scheme_id === 'ELS'
+  ? 'PM-Vidyalaxmi'
+  : scheme.scheme_name}</h2>
                     <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{scheme.description}</p>
                   </div>
                   <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-bold text-saffron-600 sm:flex" aria-hidden="true">

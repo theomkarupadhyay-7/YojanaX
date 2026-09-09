@@ -6,6 +6,7 @@ import Calculator from './pages/Calculator';
 import StateDistrictSelect from './StateDistrictSelect';
 import Partners from './pages/Partners';
 import Chatbot from "./components/chatbot";
+import SignIn from './pages/SignIn';
 
 // English is the base language; every other language falls back to these
 // keys whenever a translation is missing.
@@ -19,7 +20,7 @@ const translations = {
     "description": "YOJANAX helps marginalized entrepreneurs discover suitable government-backed financial schemes based on their business, income, and funding requirements.",
     "findScheme": "Find My Scheme",
     "explore": "Explore Schemes",
-    "schemesCount": "50+ Central & State Schemes",
+    "schemesCount": "Central & State Schemes",
     "dbt": "Direct DBT Disbursal",
     "intermediaries": "Zero Intermediaries",
     "matching": "Personalized Matching",
@@ -428,7 +429,7 @@ const heroImages = [
     alt: 'Modern clean vector illustration of an Indian entrepreneur smiling, standing next to modern subtle digital financial tech symbols',
   },
   {
-    src: 'https://d14a823tufvajd.cloudfront.net/images/r9p5VzWggfpwG4VYOImj.jpg',
+    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNuTtqlqoAEerYg5qOW1hL4fjoQ6v2PliLrBWMLN9-cSAfPgVceWFAYCL1&s=10',
     alt: 'Placeholder image 2 — replace with your own artwork',
   },
   {
@@ -464,6 +465,7 @@ export default function App() {
   const [showPartners, setShowPartners] = useState(false);
   const [activeModal, setActiveModal] = useState(null);
   const langMenuRef = useRef(null);
+  const [showSignIn, setShowSignIn] = useState(false);
 
   // Look up a translated string, falling back to English if missing.
   const t = (key) => translations[language]?.[key] ?? translations.English[key];
@@ -478,7 +480,7 @@ export default function App() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 4000);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 
@@ -564,7 +566,13 @@ export default function App() {
       </div>
     );
   };
-
+  if (showSignIn) {
+    return (
+      <SignIn
+        onBack={() => setShowSignIn(false)}
+      />
+    );
+  }
   return (
     <div className="bg-[#fcfdfd] text-slate-800 font-sans antialiased selection:bg-orange-100 selection:text-orange-900 min-h-screen flex flex-col relative overflow-x-hidden">
       <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-orange-100/40 rounded-full blur-3xl pointer-events-none -z-10 translate-x-1/3 -translate-y-1/3"></div>
@@ -644,7 +652,7 @@ export default function App() {
                 <button className="language-option flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors" data-language="বাংলা" role="menuitem" type="button" onClick={() => { setLanguage('বাংলা'); setMenuOpen(false); }}><span>বাংলা</span><span className="text-[11px] font-normal text-slate-400">Bengali</span></button>
               </div>
             </div>
-            <a className="text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg border border-slate-300 hover:border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all duration-200" href="#signin">
+            <a className="text-xs sm:text-sm font-semibold px-4 py-2 rounded-lg border border-slate-300 hover:border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white transition-all duration-200 cursor-pointer"  onClick={() => setShowSignIn(true)}>
               Sign In
             </a>
           </div>
@@ -654,11 +662,15 @@ export default function App() {
         {showPartners ? (
           <Partners onBack={() => setShowPartners(false)} />
         ) : showCalculator ? (
-          <Calculator onBack={() => setShowCalculator(false)} />
+          <Calculator
+            language={language}
+            scheme={selectedScheme}
+            onBack={() => setShowCalculator(false)} />
         ) : selectedScheme ? (
           <SchemeDetails
             language={language}
             scheme={selectedScheme}
+            answers={questionnaireAnswers}
             onCalculate={() => setShowCalculator(true)}
             onPartner={() => {
               setShowPartners(true);
@@ -669,7 +681,7 @@ export default function App() {
             }}
           />
         ) : showRecommendations ? (
-          <Recommendations  answers={questionnaireAnswers} language={language} onBack={() => {
+          <Recommendations answers={questionnaireAnswers} language={language} onBack={() => {
             setShowRecommendations(false);
             setShowQuestionnaire(true);
           }} onViewDetails={(scheme) => {

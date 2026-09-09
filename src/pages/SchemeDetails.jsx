@@ -68,12 +68,73 @@ function ArrowIcon() {
   return <span aria-hidden="true">→</span>;
 }
 
-export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, language = 'English' }) {
+export default function SchemeDetails({ scheme, answers, onBack, onCalculate, onPartner, language = 'English' }) {
   const [openFaq, setOpenFaq] = useState(null);
   const [feedbackChoice, setFeedbackChoice] = useState('');
   const [apiScheme, setApiScheme] = useState(null);
   const [loading, setLoading] = useState(true);
   const copy = labels[language] ?? labels.English;
+
+  const form = answers?.formData ?? {};
+
+  const hasBusinessInfo =
+    Boolean(form.businessType) ||
+    Boolean(form.mainActivity) ||
+    Boolean(form.projectCost) ||
+    Boolean(form.fundingPurpose);
+
+  const casteCertificateReady =
+    form.caste_certificate_valid === 'Yes';
+
+  const gapItems = [
+    {
+      name: 'Udyam Registration',
+      status: 'Not verified',
+    },
+    {
+      name: 'Bank Account Details',
+      status: 'Not verified',
+    },
+    {
+      name: 'Business Information',
+      status: hasBusinessInfo ? 'Profile info provided' : 'Not provided',
+    },
+  ];
+
+  const documentItems = [
+    {
+      name: 'Aadhaar',
+      status: 'Not verified',
+    },
+    {
+      name: 'PAN',
+      status: 'Not verified',
+    },
+    {
+      name: 'Caste Certificate',
+      status: casteCertificateReady ? 'Provided' : 'Not verified',
+    },
+    {
+      name: 'Bank Statement',
+      status: 'Not verified',
+    },
+    {
+      name: 'Business Registration',
+      status: 'Not verified',
+    },
+  ];
+
+  const readinessItems = [
+    hasBusinessInfo,
+    casteCertificateReady,
+    false, // Aadhaar not verified
+    false, // PAN not verified
+    false, // Bank statement not verified
+  ];
+
+  const readinessScore = Math.round(
+    (readinessItems.filter(Boolean).length / readinessItems.length) * 100
+  );
 
   useEffect(() => {
     const loadScheme = async () => {
@@ -103,17 +164,145 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
     loadScheme();
   }, [scheme?.scheme_id]);
 
+  const schemeDescriptions = {
+    MFS: 'A micro-finance credit scheme for eligible entrepreneurs seeking financial assistance for small business activities. Loan assistance can cover up to 90% of the project cost, with funding available up to ₹1.25 lakh at a fixed interest rate of 6.5% and repayment over 3 years.',
+
+    TERM_LOAN: 'A term loan scheme for eligible entrepreneurs with larger project requirements. Financial assistance can cover up to 90% of the project cost, with loans available up to ₹45 lakh at a fixed interest rate of 8% and repayment over a period of up to 7 years.',
+
+    AMY: 'Aajeevika Micro-Finance Yojana provides micro-finance assistance for eligible entrepreneurs through NBFC-MFI channel partners. Loan assistance can cover up to 90% of the project cost, with funding available up to ₹1.25 lakh at an interest rate of 15% and repayment over 3 years.',
+
+    UNY: 'A credit scheme for eligible entrepreneurs seeking financial assistance for business activities. Loan assistance is available up to ₹4.5 lakh through approved channel partners, with repayment over up to 5 years. The applicable interest rate depends on the lending partner.',
+
+    ELS: 'PM-Vidyalaxmi loan scheme for eligible SC students pursuing regular full-time professional or technical courses. Loan assistance is available up to ₹40 lakh at a fixed interest rate of 6.5%, with repayment over up to 12 years. Courses and institutions must meet the applicable recognition requirements.',
+  };
+  const schemeFaqs = {
+    MFS: [
+      [
+        'Who can apply for the Micro Finance Scheme?',
+        'Eligible SC entrepreneurs who meet the applicable income and scheme requirements can apply through an authorized channel partner.',
+      ],
+      [
+        'What is the maximum loan assistance?',
+        'Loan assistance is available up to ₹1.25 lakh, subject to the applicable scheme conditions.',
+      ],
+      [
+        'What is the interest rate?',
+        'The fixed interest rate is 6.5%.',
+      ],
+      [
+        'What is the repayment period?',
+        'The repayment period is up to 3 years, with a 3-month moratorium.',
+      ],
+    ],
+
+    TERM_LOAN: [
+      [
+        'Who can apply for the Term Loan scheme?',
+        'Eligible SC entrepreneurs meeting the applicable scheme requirements can apply through an authorized channel partner.',
+      ],
+      [
+        'What is the maximum loan assistance?',
+        'Financial assistance is available up to ₹45 lakh, subject to the applicable scheme conditions.',
+      ],
+      [
+        'What is the interest rate?',
+        'The fixed interest rate is 8%.',
+      ],
+      [
+        'What is the repayment period?',
+        'The repayment period is up to 7 years. Certain eligible activities may have a longer moratorium.',
+      ],
+    ],
+
+    AMY: [
+      [
+        'What is Aajeevika Micro-Finance Yojana?',
+        'It provides micro-finance assistance to eligible SC entrepreneurs through NBFC-MFI channel partners.',
+      ],
+      [
+        'What is the maximum loan assistance?',
+        'Loan assistance is available up to ₹1.25 lakh, subject to the applicable scheme conditions.',
+      ],
+      [
+        'What is the interest rate?',
+        'The interest rate is 15%.',
+      ],
+      [
+        'What is the repayment period?',
+        'The repayment period is up to 3 years, with a 3-month moratorium.',
+      ],
+    ],
+
+    UNY: [
+      [
+        'What is the maximum loan assistance under Udyam Nidhi Yojana?',
+        'Loan assistance is available up to ₹4.5 lakh, subject to the applicable scheme conditions.',
+      ],
+      [
+        'Who can apply?',
+        'Eligible SC entrepreneurs meeting the applicable income and other scheme requirements can apply through approved channel partners.',
+      ],
+      [
+        'What is the repayment period?',
+        'The repayment period is up to 5 years, with a 3-month moratorium.',
+      ],
+      [
+        'Does the interest rate vary?',
+        'Yes. The applicable interest rate depends on the lending channel partner.',
+      ],
+    ],
+
+    ELS: [
+      [
+        'Who can apply for PM-Vidyalaxmi?',
+        'Eligible SC students pursuing regular full-time professional or technical courses can apply, subject to the applicable eligibility requirements.',
+      ],
+      [
+        'What is the maximum loan assistance?',
+        'Educational loan assistance is available up to ₹40 lakh, subject to the applicable scheme conditions.',
+      ],
+      [
+        'What is the interest rate?',
+        'The fixed interest rate is 6.5%.',
+      ],
+      [
+        'What courses are eligible?',
+        'Eligible professional and technical courses must meet the applicable recognition requirements.',
+      ],
+    ],
+  };
   const detailsScheme = apiScheme
     ? {
-      name: apiScheme.scheme_name,
-      description: `${apiScheme.scheme_category} scheme for ${apiScheme.target_type}.`,
+      name:
+        apiScheme.scheme_id === 'ELS'
+          ? 'PM-Vidyalaxmi'
+          : apiScheme.scheme_name,
+      description:
+        schemeDescriptions[apiScheme.scheme_id] ||
+        `${apiScheme.scheme_category
+          ? apiScheme.scheme_category.charAt(0).toUpperCase() +
+          apiScheme.scheme_category.slice(1)
+          : 'N/A'} scheme for ${apiScheme.target_type
+            ? apiScheme.target_type.charAt(0).toUpperCase() +
+            apiScheme.target_type.slice(1)
+            : 'N/A'
+        }.`,
       matchStatus:
         scheme?.eligibility_status === 'incomplete'
           ? 'Suitable — Partner Required'
           : 'Eligible',
       matchScore: scheme?.match_score ?? 0,
-      overview: apiScheme.scheme_category,
-      purpose: apiScheme.target_type,
+      overview:
+        apiScheme.scheme_category
+          ? apiScheme.scheme_category.charAt(0).toUpperCase() +
+          apiScheme.scheme_category.slice(1)
+          : 'N/A',
+
+      purpose:
+        apiScheme.target_type
+          ? apiScheme.target_type.charAt(0).toUpperCase() +
+          apiScheme.target_type.slice(1)
+          : 'N/A',
       targetApplicants: apiScheme.eligibility?.notes?.join(' ') || 'As per scheme eligibility criteria.',
       supportType: `Loan assistance up to ₹${apiScheme.loan_amount?.max_inr?.toLocaleString('en-IN') || 'N/A'}.`,
       benefits: [
@@ -138,11 +327,13 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
       documentsRequired: apiScheme.documents?.length
         ? apiScheme.documents
         : ['Documents as specified by the scheme'],
-      faqs: [],
+      faqs: schemeFaqs[apiScheme.scheme_id] || [],
       sources: apiScheme.provenance?.source_url
         ? [apiScheme.provenance.source_url]
         : [],
     }
+
+
     : {
       ...mockScheme,
       name: scheme?.scheme_name ?? mockScheme.name,
@@ -169,7 +360,7 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
         </div>
         <section className="relative overflow-hidden border-b border-slate-200 pb-10 pt-2 sm:pb-14">
           <div className="absolute right-0 top-0 h-32 w-32 rounded-full bg-orange-100/50 blur-3xl" aria-hidden="true" />
-          <div className="relative flex flex-wrap items-center gap-3"><span className="rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-bold text-saffron-700">{detailsScheme.matchStatus}</span><span className="rounded-md border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-sm font-semibold text-emerald-700">{detailsScheme.matchScore}% {copy.match}</span></div>
+          <div className="relative flex flex-wrap items-center gap-3"><span className="rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-lg font-bold text-saffron-700">{detailsScheme.matchStatus}</span><span className="rounded-md border border-emerald-100 bg-emerald-50 px-2.5 py-1 text-xl font-semibold text-emerald-700">{detailsScheme.matchScore}% {copy.match}</span></div>
           <h1 className="relative mt-5 max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-navy-900 sm:text-5xl">{detailsScheme.name}</h1>
           <p className="relative mt-4 max-w-3xl text-base leading-8 text-slate-600 sm:text-lg">{detailsScheme.description}</p>
         </section>
@@ -177,11 +368,11 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
         <section className="border-b border-slate-200 py-10">
           <h2 className="text-2xl font-bold text-navy-900">{copy.details}</h2>
           <dl className="mt-6 divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-            {[[copy.name, detailsScheme.name], [copy.overview, detailsScheme.overview], [copy.purpose, detailsScheme.purpose], [copy.applicants, detailsScheme.targetApplicants], [copy.support, detailsScheme.supportType]].map(([label, value]) => <div className="grid gap-2 px-4 py-5 odd:bg-slate-50/70 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] sm:gap-8 sm:px-6" key={label}><dt className="text-sm font-semibold text-navy-900">{label}</dt><dd className="text-sm leading-relaxed text-slate-600">{value}</dd></div>)}
+            {[[copy.name, detailsScheme.name], [copy.overview, detailsScheme.overview], [copy.purpose, detailsScheme.purpose], [copy.applicants, detailsScheme.targetApplicants], [copy.support, detailsScheme.supportType]].map(([label, value]) => <div className="grid gap-2 px-4 py-5 odd:bg-slate-50/70 sm:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] sm:gap-8 sm:px-6" key={label}><dt className="text-sm font-semibold text-navy-900">{label}</dt><dd className="text-base leading-relaxed text-slate-600">{value}</dd></div>)}
           </dl>
         </section>
 
-        <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-saffron-500 pl-3 text-2xl font-bold text-navy-900">{copy.benefits}</h2><ul className="mt-6 space-y-4">{detailsScheme.benefits.map((benefit) => <li className="flex items-start gap-3 text-sm leading-relaxed text-slate-600" key={benefit}><CheckIcon />{benefit}</li>)}</ul></section>
+        <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-saffron-500 pl-3 text-2xl font-bold text-navy-900">{copy.benefits}</h2><ul className="mt-6 space-y-4">{detailsScheme.benefits.map((benefit) => <li className="flex items-start gap-3 text-base leading-relaxed text-slate-600" key={benefit}><CheckIcon />{benefit}</li>)}</ul></section>
 
         <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-emerald-500 pl-3 text-2xl font-bold text-navy-900">{copy.eligibility}</h2><p className="mt-2 text-sm text-slate-500">{copy.demo}</p><dl className="mt-6 divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">{detailsScheme.eligibility.map(([label, value]) => <div className="grid gap-2 px-4 py-5 odd:bg-slate-50/70 sm:grid-cols-2 sm:gap-8 sm:px-6" key={label}><dt className="text-sm font-semibold text-navy-900">{label}</dt><dd className="text-sm leading-relaxed text-slate-600">{value}</dd></div>)}</dl></section>
 
@@ -190,19 +381,26 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
         <section className="border-b border-slate-200 py-10">
           <h2 className="border-l-4 border-amber-500 pl-3 text-2xl font-bold text-navy-900">Scheme Gap Analyzer</h2>
           <p className="mt-2 text-sm leading-relaxed text-slate-500">Identify requirements that may still need attention before applying.</p>
+          <div className="mt-5">
+            <div className="flex items-center justify-between text-base font-semibold text-slate-700">
+              <span>Profile Readiness</span>
+              <span>{readinessScore}%</span>
+            </div>
+
+            <div className="mt-2 h-2 overflow-hidden rounded-full bg-slate-200">
+              <div
+                className="h-full rounded-full bg-amber-500 transition-all"
+                style={{ width: `${readinessScore}%` }}
+              />
+            </div>
+          </div>
           <div className="mt-6 space-y-3">
-            <div className="rounded-xl border border-amber-200 bg-amber-50/60 p-4 sm:flex sm:items-center sm:justify-between sm:gap-6">
-              <div><h3 className="text-sm font-bold text-slate-800">Udyam Registration</h3><p className="mt-1 text-sm text-slate-600">Complete Udyam Registration before proceeding, if applicable.</p></div>
-              <span className="mt-3 inline-flex w-fit rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-bold text-amber-800 sm:mt-0">Missing</span>
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:flex sm:items-center sm:justify-between sm:gap-6">
-              <div><h3 className="text-sm font-bold text-slate-800">Bank Account Details</h3><p className="mt-1 text-sm text-slate-600">Keep your bank account details ready for verification.</p></div>
-              <span className="mt-3 inline-flex w-fit rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-bold text-slate-700 sm:mt-0">Pending</span>
-            </div>
-            <div className="rounded-xl border border-emerald-200 bg-emerald-50/60 p-4 sm:flex sm:items-center sm:justify-between sm:gap-6">
-              <div><h3 className="text-sm font-bold text-slate-800">Business Information</h3><p className="mt-1 text-sm text-slate-600">Your business purpose and project information have been provided.</p></div>
-              <span className="mt-3 inline-flex w-fit rounded-full border border-emerald-300 bg-white px-3 py-1 text-xs font-bold text-emerald-700 sm:mt-0">Ready</span>
-            </div>
+            {gapItems.map((item) => (
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 sm:flex sm:items-center sm:justify-between sm:gap-6" key={item.name}>
+                <div><h3 className="text-sm font-bold text-slate-800">{item.name}</h3></div>
+                <span className="mt-3 inline-flex w-fit rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-bold text-slate-700 sm:mt-0">{item.status}</span>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -213,21 +411,12 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
             Document requirements are based on the selected scheme.
           </p>
           <div className="mt-6 divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-            {[
-              ['Aadhaar', 'Ready', 'Document marked ready in this demo.', 'emerald'],
-              ['PAN', 'Ready', 'Document marked ready in this demo.', 'emerald'],
-              ['Caste Certificate', 'Ready', 'Document marked ready in this demo.', 'emerald'],
-              ['Bank Statement', 'Missing', 'Provide this document if applicable.', 'red'],
-              ['Business Registration', 'Pending', 'Awaiting further information in this demo.', 'amber'],
-            ].map(([name, status, message, tone]) => (
-              <div className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6" key={name}>
+            {documentItems.map((item) => (
+              <div className="flex flex-col gap-3 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-6" key={item.name}>
                 <div className="flex items-start gap-3">
-                  <span className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-xs font-bold ${tone === 'emerald' ? 'bg-emerald-100 text-emerald-700' : tone === 'red' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-700'}`} aria-hidden="true">
-                    {tone === 'emerald' ? '✓' : tone === 'red' ? '!' : '•'}
-                  </span>
-                  <div><h3 className="text-sm font-bold text-slate-800">{name}</h3><p className="mt-1 text-sm text-slate-600">{message}</p></div>
+                  <div><h3 className="text-sm font-bold text-slate-800">{item.name}</h3></div>
                 </div>
-                <span className={`inline-flex w-fit rounded-full border px-3 py-1 text-xs font-bold ${tone === 'emerald' ? 'border-emerald-200 bg-emerald-50 text-emerald-700' : tone === 'red' ? 'border-red-200 bg-red-50 text-red-700' : 'border-amber-200 bg-amber-50 text-amber-800'}`}>{status}</span>
+                <span className="inline-flex w-fit rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-xs font-bold text-slate-700">{item.status}</span>
               </div>
             ))}
           </div>
@@ -240,7 +429,24 @@ export default function SchemeDetails({ scheme, onBack, onCalculate, onPartner, 
 
         <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-navy-900 pl-3 text-2xl font-bold text-navy-900">{copy.faq}</h2><div className="mt-5 divide-y divide-slate-200 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">{detailsScheme.faqs.map(([question, answer], index) => <div key={question}><button aria-expanded={openFaq === index} className="flex w-full items-center justify-between gap-4 px-4 py-5 text-left text-sm font-semibold text-navy-900 transition-colors hover:bg-slate-50 sm:px-6" onClick={() => setOpenFaq(openFaq === index ? null : index)} type="button"><span>{question}</span><span className="flex h-6 w-6 items-center justify-center rounded-full bg-slate-100 text-lg font-normal leading-none text-slate-500">{openFaq === index ? '−' : '+'}</span></button>{openFaq === index && <p className="bg-slate-50 px-4 pb-5 pr-8 text-sm leading-relaxed text-slate-600 sm:px-6">{answer}</p>}</div>)}</div></section>
 
-        <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-slate-400 pl-3 text-2xl font-bold text-navy-900">{copy.sources}</h2><p className="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-4 text-sm leading-relaxed text-slate-600">{detailsScheme.sources.length ? detailsScheme.sources : copy.noSources}</p></section>
+        <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-slate-400 pl-3 text-2xl font-bold text-navy-900">{copy.sources}</h2>
+          <div className="mt-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-4 text-sm leading-relaxed">
+            {detailsScheme.sources.length ? (
+              detailsScheme.sources.map((source) => (
+                <a
+                  key={source}
+                  href={source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-blue-700 underline underline-offset-2 hover:text-blue-900"
+                >
+                  {source}
+                </a>
+              ))
+            ) : (
+              <span className="text-slate-600">{copy.noSources}</span>
+            )}
+          </div></section>
 
         <section className="border-b border-slate-200 py-10"><h2 className="border-l-4 border-emerald-500 pl-3 text-2xl font-bold text-navy-900">{copy.feedback}</h2><p className="mt-3 text-sm text-slate-600">{copy.helpful}</p><div className="mt-4 flex gap-3"><button className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${feedbackChoice === 'yes' ? 'border-emerald-600 bg-emerald-50 text-emerald-700' : 'border-slate-300 bg-white text-slate-700 hover:border-emerald-400'}`} onClick={() => setFeedbackChoice('yes')} type="button">{copy.yes}</button><button className={`rounded-lg border px-4 py-2 text-sm font-semibold transition-colors ${feedbackChoice === 'no' ? 'border-saffron-500 bg-orange-50 text-saffron-700' : 'border-slate-300 bg-white text-slate-700 hover:border-saffron-400'}`} onClick={() => setFeedbackChoice('no')} type="button">{copy.no}</button></div><div className="mt-4 flex flex-col gap-3 sm:flex-row"><input aria-label={copy.placeholder} className="min-h-11 flex-1 rounded-lg border border-slate-300 bg-white px-3 text-sm outline-none transition-shadow placeholder:text-slate-400 focus:border-navy-900 focus:ring-2 focus:ring-navy-900/10" placeholder={copy.placeholder} type="text" /><button className="rounded-lg bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy-800" type="button">{copy.submit}</button></div></section>
 

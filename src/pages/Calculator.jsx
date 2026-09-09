@@ -5,19 +5,18 @@ const calculatorCopy = {
     back: ' Back to Scheme',
     eyebrow: 'YOJANAX · Financial Calculator',
     heading: 'EMI & Repayment Calculator',
-    subtitle: 'Estimate your monthly EMI, total interest, and repayment for government-backed loan schemes. Adjust the sliders below to match your requirements.',
+    subtitle: 'Estimate your monthly EMI, total interest, and repayment for government-backed loan schemes. Adjust the sliders below to match your requirements accordingly. ',
     controlsTitle: 'Loan Parameters',
     controlsDesc: 'Drag or type to adjust values',
     loanAmount: 'Loan Amount',
     interestRate: 'Interest Rate (p.a.)',
     tenureMonths: 'Loan Tenure',
     months: 'months',
-    disclaimer: '⚠️ This is a demo estimate only. Actual EMI may vary based on bank-specific processing fees, insurance, and other charges. Always consult your lending institution for final figures.',
-    resultEyebrow: 'Estimate Ready',
+    disclaimer: '⚠️ This is an estimate based on the selected scheme. Final repayment may vary based on lender-specific terms and charges. Parameters above may or may not match respective scheme details.', resultEyebrow: 'Estimate Ready',
     resultTitle: 'Repayment Breakdown',
-    demoBadge: 'Demo Estimate',
+    demoBadge: 'Scheme Estimate',
     totalPayable: 'Total Payable',
-    demoEstimate: 'Demo estimate only',
+    demoEstimate: 'based on selected Scheme estimate',
     principalAmount: 'Principal',
     interestAmount: 'Interest',
     estimatedEmi: 'Estimated Monthly EMI',
@@ -39,12 +38,12 @@ const calculatorCopy = {
     interestRate: 'ब्याज दर (प्रति वर्ष)',
     tenureMonths: 'ऋण अवधि',
     months: 'महीने',
-    disclaimer: '⚠️ यह केवल एक डेमो अनुमान है। वास्तविक EMI बैंक शुल्क के आधार पर भिन्न हो सकती है।',
+    disclaimer: '⚠️ यह चयनित योजना के आधार पर एक अनुमान है। अंतिम पुनर्भुगतान ऋणदाता की शर्तों और शुल्क के अनुसार अलग हो सकता है।',
     resultEyebrow: 'अनुमान तैयार',
     resultTitle: 'पुनर्भुगतान विवरण',
-    demoBadge: 'डेमो अनुमान',
+    demoBadge: 'योजना अनुमान',
     totalPayable: 'कुल देय',
-    demoEstimate: 'केवल डेमो अनुमान',
+    demoEstimate: 'चयनित योजना के आधार पर',
     principalAmount: 'मूलधन',
     interestAmount: 'ब्याज',
     estimatedEmi: 'अनुमानित मासिक EMI',
@@ -58,7 +57,6 @@ const calculatorCopy = {
 };
 
 const calculatorConfig = {
-  schemeName: 'Pradhan Mantri Mudra Yojana (PMMY)',
   loanAmount: { min: 50000, max: 1000000, step: 5000, initial: 250000 },
   interestRate: { min: 1, max: 20, step: 0.1, initial: 10.5 },
   tenureMonths: { min: 6, max: 84, step: 1, initial: 36 },
@@ -122,8 +120,12 @@ function DonutChart({ principal, interest, total, copy }) {
 }
 
 function SliderControl({ label, value, min, max, step, suffix, onChange, monthsText }) {
-  const displayValue = suffix === '%' ? `${value}%` : formatCurrency(value);
-
+  const displayValue =
+    suffix === '%'
+      ? `${value}%`
+      : suffix === 'months'
+        ? `${value} ${monthsText ?? 'months'}`
+        : formatCurrency(value);
   return (
     <div className="border-b border-slate-200 pb-6 last:border-b-0 last:pb-0">
       <div className="flex items-center justify-between gap-4">
@@ -158,12 +160,14 @@ function SliderControl({ label, value, min, max, step, suffix, onChange, monthsT
   );
 }
 
-export default function Calculator({ onBack, language = 'English' }) {
+export default function Calculator({ onBack, language = 'English', scheme }) {
   const [loanAmount, setLoanAmount] = useState(calculatorConfig.loanAmount.initial);
   const [interestRate, setInterestRate] = useState(calculatorConfig.interestRate.initial);
   const [tenureMonths, setTenureMonths] = useState(calculatorConfig.tenureMonths.initial);
 
   const copy = calculatorCopy[language] ?? calculatorCopy.English;
+  const selectedSchemeName =
+    scheme?.scheme_name ?? scheme?.name ?? 'Selected Scheme';
 
   const result = useMemo(() => {
     const monthlyRate = interestRate / 100 / 12;
@@ -197,6 +201,9 @@ export default function Calculator({ onBack, language = 'English' }) {
           </button>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-saffron-600">{copy.eyebrow}</p>
           <h1 className="mt-3 text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">{copy.heading}</h1>
+          <p className="mt-2 text-xl font-semibold text-saffron-600">
+            {selectedSchemeName}
+          </p>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600">{copy.subtitle}</p>
         </header>
 
@@ -235,7 +242,7 @@ export default function Calculator({ onBack, language = 'English' }) {
             <div className="mt-8 border-t border-slate-200 pt-6">
               <div className="flex flex-wrap items-end justify-between gap-3">
                 <div><p className="text-sm font-semibold text-slate-500">{copy.estimatedEmi}</p><p className="mt-1 text-4xl font-extrabold tracking-tight text-navy-900">{formatCurrency(result.emi)}<span className="ml-2 text-sm font-semibold text-slate-500">{copy.perMonth}</span></p></div>
-                <button className="rounded-xl bg-navy-900 px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-navy-800 cursor-pointer" type="button">{copy.calculateBtn}</button>
+
               </div>
               <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-t border-slate-100 pt-5 sm:grid-cols-4">
                 <div><dt className="text-xs text-slate-500">{copy.totalRepayment}</dt><dd className="mt-1 text-sm font-bold text-navy-900">{formatCurrency(result.totalRepayment)}</dd></div>
