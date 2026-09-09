@@ -1,16 +1,49 @@
-# React + Vite
+# YojanaX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### AI-Driven Scheme Matching for Marginalized Entrepreneurs
 
-Currently, two official plugins are available:
+YojanaX is a government-scheme discovery and assistance platform designed to help marginalized entrepreneurs and students identify suitable financial support schemes, understand their eligibility, estimate loan repayments, and locate nearby authorized partner institutions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project is being developed for **Smart India Hackathon 2026 — SIH26092**, under the **Ministry of Social Justice and Empowerment (MoSJE)**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Problem
 
-## Expanding the ESLint configuration
+Finding and understanding government financial assistance schemes can be difficult because applicants often need to:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Identify schemes they are eligible for
+- Understand scheme-specific eligibility requirements
+- Compare loan amounts, interest rates, and repayment periods
+- Determine which channel partners can process their application
+- Find nearby partner institutions
+- Navigate large amounts of scheme-related information
+
+YojanaX brings these capabilities together into a single guided platform.
+
+---
+
+## 💡 Solution
+
+YojanaX provides an end-to-end flow:
+
+```text
+User
+  │
+  ▼
+Eligibility Questionnaire
+  │
+  ▼
+Eligibility Engine
+  │
+  ▼
+Personalized Scheme Recommendations
+  │
+  ▼
+Scheme Details
+  │
+  ├──────────────► Financial Calculator
+  │
+  ├──────────────► Partner Locator
+  │
+  └──────────────► RAG Assistant
