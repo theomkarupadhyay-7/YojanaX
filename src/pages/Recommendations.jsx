@@ -46,7 +46,8 @@ const statusStyles = {
 };
 
 const recommendationCopy = {
-  English: { back: 'Back to questionnaire', matching: 'Scheme Matching', eyebrow: 'Personalized discovery', heading: 'Your Recommended Schemes', subtitle: 'Based on the information you provided, here are schemes that may be suitable for you.', why: 'Why this may suit you', details: 'View Scheme Details', match: 'Match', note: 'Recommendations are based on the information provided and applicable scheme criteria. Please verify the latest eligibility requirements before applying.' },
+  English: { back: 'Back to questionnaire', matching: 'Scheme Matching', eyebrow: 'Personalized discovery', heading: 'Your Recommended Schemes', subtitle: 'Based on the information you provided, here are schemes that may be suitable for you.', why: 'Why this may suit you', details: 'View Scheme Details', match: 'Match', note: 'Recommendations are based on the information provided and applicable scheme criteria. Please verify the latest eligibility requirements before applying.',  loadingTitle: 'Finding the best schemes for you...',
+  loadingSubtitle: 'Please wait while YojanaX analyzes your profile and matches the most relevant government schemes.' },
   'हिंदी': { back: 'प्रश्नावली पर वापस जाएं', matching: 'योजना मिलान', eyebrow: 'व्यक्तिगत खोज', heading: 'आपकी अनुशंसित योजनाएं', subtitle: 'आपके द्वारा दी गई जानकारी के आधार पर, यहां आपके लिए उपयुक्त योजनाएं हैं।', why: 'यह आपके लिए उपयुक्त क्यों हो सकती है', details: 'योजना विवरण देखें', match: 'मिलान', note: 'अनुशंसाएं दी गई जानकारी और लागू योजना मानदंडों पर आधारित हैं। आवेदन से पहले नवीनतम पात्रता आवश्यकताओं की जांच करें।' },
   'मराठी': { back: 'प्रश्नावलीकडे परत जा', matching: 'योजना जुळणी', eyebrow: 'वैयक्तिक शोध', heading: 'तुमच्यासाठी शिफारस केलेल्या योजना', subtitle: 'तुम्ही दिलेल्या माहितीच्या आधारे, तुमच्यासाठी योग्य योजना येथे आहेत.', why: 'ही तुमच्यासाठी योग्य का असू शकते', details: 'योजनेचा तपशील पहा', match: 'जुळणी', note: 'शिफारसी दिलेल्या माहिती आणि लागू योजना निकषांवर आधारित आहेत. अर्ज करण्यापूर्वी नवीनतम पात्रता तपासा.' },
   'भोजपुरी': { back: 'प्रश्नावली पर वापस जाईं', matching: 'योजना मिलान', eyebrow: 'आपके खातिर खोज', heading: 'रउरा खातिर सुझावल योजना', subtitle: 'रउरा देहल जानकारी के आधार पर, रउरा खातिर सही हो सके वाला योजना इहां बा।', why: 'ई रउरा खातिर सही काहे हो सकेला', details: 'योजना के विवरण देखीं', match: 'मिलान', note: 'सिफारिश रउरा देहल जानकारी आ लागू योजना के नियम पर आधारित बा। आवेदन से पहिले नवीनतम पात्रता जांचीं।' },
@@ -54,9 +55,9 @@ const recommendationCopy = {
   'తెలుగు': { back: 'ప్రశ్నావళికి తిరిగి వెళ్లండి', matching: 'పథకం సరిపోలిక', eyebrow: 'వ్యక్తిగత శోధన', heading: 'మీ కోసం సిఫార్సు చేసిన పథకాలు', subtitle: 'మీరు అందించిన సమాచారం ఆధారంగా, మీకు సరిపోయే పథకాలు ఇవి.', why: 'ఇది మీకు ఎందుకు సరిపోవచ్చు', details: 'పథకం వివరాలు చూడండి', match: 'సరిపోలిక', note: 'సిఫార్సులు మీరు అందించిన సమాచారం మరియు వర్తించే పథక ప్రమాణాలపై ఆధారపడి ఉంటాయి. దరఖాస్తు ముందు తాజా అర్హతలను తనిఖీ చేయండి.' },
   'മലയാളം': { back: 'ചോദ്യാവലിയിലേക്ക് മടങ്ങുക', matching: 'പദ്ധതി പൊരുത്തം', eyebrow: 'വ്യക്തിഗത തിരച്ചിൽ', heading: 'നിങ്ങൾക്കുള്ള ശുപാർശ ചെയ്ത പദ്ധതികൾ', subtitle: 'നിങ്ങൾ നൽകിയ വിവരങ്ങളുടെ അടിസ്ഥാനത്തിൽ, നിങ്ങൾക്ക് അനുയോജ്യമായ പദ്ധതികൾ ഇവയാണ്.', why: 'ഇത് നിങ്ങൾക്ക് അനുയോജ്യമാകാനുള്ള കാരണം', details: 'പദ്ധതി വിശദാംശങ്ങൾ കാണുക', match: 'പൊരുത്തം', note: 'നൽകിയ വിവരങ്ങളും ബാധകമായ പദ്ധതി മാനദണ്ഡങ്ങളും അടിസ്ഥാനമാക്കിയാണ് ശുപാർശകൾ. അപേക്ഷിക്കുന്നതിന് മുമ്പ് ഏറ്റവും പുതിയ യോഗ്യത പരിശോധിക്കുക.' },
   'ગુજરાતી': { back: 'પ્રશ્નાવલી પર પાછા જાઓ', matching: 'યોજના મેળ', eyebrow: 'વ્યક્તિગત શોધ', heading: 'તમારા માટે ભલામણ કરેલી યોજનાઓ', subtitle: 'તમે આપેલી માહિતીના આધારે, તમારા માટે યોગ્ય યોજનાઓ અહીં છે.', why: 'આ તમારા માટે યોગ્ય કેમ હોઈ શકે', details: 'યોજનાની વિગતો જુઓ', match: 'મેળ', note: 'ભલામણો આપેલી માહિતી અને લાગુ યોજના માપદંડો પર આધારિત છે. અરજી કરતા પહેલાં નવીનતમ પાત્રતા ચકાસો.' },
-  'ଓଡ଼ିଆ': { back: 'ପ୍ରଶ୍ନାବଳୀକୁ ଫେରନ୍ତୁ', matching: 'ଯୋଜନା ମେଳ', eyebrow: 'ବ୍ୟକ୍ତିଗତ ସନ୍ଧାନ', heading: 'ଆପଣଙ୍କ ପାଇଁ ସୁପାରିଶ ଯୋଜନା', subtitle: 'ଆପଣ ଦେଇଥିବା ସୂଚନା ଆଧାରରେ, ଆପଣଙ୍କ ପାଇଁ ଉପଯୁକ୍ତ ଯୋଜନା ଏଠାରେ ଅଛି।', why: 'ଏହା ଆପଣଙ୍କ ପାଇଁ କାହିଁକି ଉପଯୁକ୍ତ', details: 'ଯୋଜନା ବିବରଣୀ ଦେଖନ୍ତୁ', match: 'ମେଳ', note: 'ସୁପାରିଶ ଆପଣଙ୍କ ସୂଚନା ଏବଂ ଲାଗୁ ଯୋଜନା ମାନଦଣ୍ଡ ଉପରେ ଆଧାରିତ। ଆବେଦନ ପୂର୍ବରୁ ସର୍ବଶେଷ ଯୋଗ୍ୟତା ଯାଞ୍ଚ କରନ୍ତୁ।' },
+  'ଓଡ଼ିଆ': { back: 'ପ୍ରଶ୍ନାବଳୀକୁ ଫେରନ୍ତୁ', matching: 'ଯୋଜନା ମେଳ', eyebrow: 'ବ୍ୟକ୍ତିଗତ ସନ୍ଧାନ', heading: 'ଆପଣଙ୍କ ପାଇଁ ସୁପାରିଶ ଯୋଜନା', subtitle: 'ଆପଣ ଦେଇଥିବା ସୂଚନା ଆଧାରରେ, ଆପଣଙ୍କ ପାଇଁ ଉପଯୁକ୍ତ ଯୋଜନା ଏଠାରେ ଅଛି।', why: 'ଏହା ଆପଣଙ୍କ ପାଇଁ କାହିଁକି ଉପଯୁକ୍ତ', details: 'ଯୋଜନା ବିବରଣୀ ଦେଖନ୍ତୁ', match: 'ମେଳ', note: 'ସୁପାରିଶ ଆପଣଙ୍କ ସୂଚନା ଏବଂ ଲାଗୁ ଯୋଜନା ମାନદଣ୍ડ ଉପରେ ଆଧାରିତ। ଆବେଦନ ପୂର୍ବରୁ ସର୍ବଶେଷ ଯୋଗ୍ୟତା ଯାଞ୍ଚ କରନ୍ତୁ।' },
   'বাংলা': { back: 'প্রশ্নাবলীতে ফিরে যান', matching: 'প্রকল্পের মিল', eyebrow: 'ব্যক্তিগত অনুসন্ধান', heading: 'আপনার জন্য সুপারিশ করা প্রকল্প', subtitle: 'আপনার দেওয়া তথ্যের ভিত্তিতে, আপনার জন্য উপযুক্ত প্রকল্পগুলি এখানে রয়েছে।', why: 'এটি আপনার জন্য উপযুক্ত হতে পারে কেন', details: 'প্রকল্পের বিবরণ দেখুন', match: 'মিল', note: 'সুপারিশগুলি আপনার দেওয়া তথ্য এবং প্রযোজ্য প্রকল্পের মানদণ্ডের উপর ভিত্তি করে। আবেদন করার আগে সর্বশেষ যোগ্যতা যাচাই করুন।' },
-};
+}
 
 function CheckIcon() {
   return (
@@ -170,6 +171,7 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
           const data = await response.json();
           setSchemes(data.recommendations || []);
           setApiError('');
+          setLoading(false);
           return;
         } catch (error) {
           console.error(`Recommendation API attempt ${attempt} failed:`, error);
@@ -214,79 +216,99 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
       </header>
 
       <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <section className="mb-10">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-saffron-600">{copy.eyebrow}</p>
-          <h1 className="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">{copy.heading}</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            {copy.subtitle}
-          </p>
-        </section>
+        {loading ? (
+          <div className="flex min-h-[60vh] items-center justify-center">
+            <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange-50">
+                <div className="h-8 w-8 animate-spin rounded-full border-4 border-slate-200 border-t-orange-500" />
+              </div>
 
-        <div className="space-y-6">
-          {schemes.map((scheme, index) => (
-            <article
-              className={`rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8 ${index === 0 ? 'border-saffron-500 ring-1 ring-saffron-500/20' : 'border-slate-200'
-                }`}
-              key={scheme.scheme_id}
-            >
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <div className="mb-3 flex flex-wrap items-center gap-2">
-                      <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700">
-                        {scheme.eligibility_status === 'incomplete' ? 'Suitable — Partner Required' : 'Eligible'}
-                      </span>
-                      <span className="rounded-lg bg-emerald-50 px-2.5 py-1 text-sm font-semibold text-emerald-700">
-                        {scheme.match_score}% {copy.match}
+              <h2 className="text-xl font-bold text-navy-900">
+                Finding the best schemes for you...
+              </h2>
+
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                Please wait while YojanaX analyzes your profile and matches the most relevant government schemes.
+              </p>
+            </div>
+          </div>
+        ) : (
+          <>
+            <section className="mb-10">
+              <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-saffron-600">{copy.eyebrow}</p>
+              <h1 className="text-3xl font-extrabold tracking-tight text-navy-900 sm:text-4xl">{copy.heading}</h1>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+                {copy.subtitle}
+              </p>
+            </section>
+
+            <div className="space-y-6">
+              {schemes.map((scheme, index) => (
+                <article
+                  className={`rounded-2xl border bg-white p-6 shadow-sm transition-shadow hover:shadow-md sm:p-8 ${index === 0 ? 'border-saffron-500 ring-1 ring-saffron-500/20' : 'border-slate-200'
+                    }`}
+                  key={scheme.scheme_id}
+                >
+                  <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <div className="mb-3 flex flex-wrap items-center gap-2">
+                          <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700">
+                            {scheme.eligibility_status === 'incomplete' ? 'Suitable — Partner Required' : 'Eligible'}
+                          </span>
+                          <span className="rounded-lg bg-emerald-50 px-2.5 py-1 text-sm font-semibold text-emerald-700">
+                            {scheme.match_score}% {copy.match}
+                          </span>
+                        </div>
+                        <h2 className="text-xl font-bold text-navy-900 sm:text-2xl">{scheme.scheme_id === 'ELS'
+                          ? 'PM-Vidyalaxmi'
+                          : scheme.scheme_name}</h2>
+                        <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{scheme.description}</p>
+                      </div>
+                      <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-bold text-saffron-600 sm:flex" aria-hidden="true">
+                        ₹
                       </span>
                     </div>
-                    <h2 className="text-xl font-bold text-navy-900 sm:text-2xl">{scheme.scheme_id === 'ELS'
-                      ? 'PM-Vidyalaxmi'
-                      : scheme.scheme_name}</h2>
-                    <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{scheme.description}</p>
+
+                    <div className="rounded-xl border border-slate-100 bg-slate-50 p-5">
+                      <h3 className="text-sm font-bold text-navy-900">{copy.why}</h3>
+                      <ul className="mt-3 space-y-3">
+                        {(scheme.fit_factors || [scheme.recommendation_reason]).map((reason) => (
+                          <li className="flex items-start gap-2 text-sm leading-relaxed text-slate-600" key={reason}>
+                            <CheckIcon />
+                            <span>{reason}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex justify-end">
+                      <button
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-800 sm:w-auto"
+                        onClick={() => onViewDetails?.(scheme)}
+                        type="button"
+                      >
+                        {copy.details}
+                        <ArrowIcon />
+                      </button>
+                    </div>
                   </div>
-                  <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-bold text-saffron-600 sm:flex" aria-hidden="true">
-                    ₹
-                  </span>
-                </div>
+                </article>
+              ))}
+            </div>
 
-                <div className="rounded-xl border border-slate-100 bg-slate-50 p-5">
-                  <h3 className="text-sm font-bold text-navy-900">{copy.why}</h3>
-                  <ul className="mt-3 space-y-3">
-                    {(scheme.fit_factors || [scheme.recommendation_reason]).map((reason) => (
-                      <li className="flex items-start gap-2 text-sm leading-relaxed text-slate-600" key={reason}>
-                        <CheckIcon />
-                        <span>{reason}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex justify-end">
-                  <button
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-800 sm:w-auto"
-                    onClick={() => onViewDetails?.(scheme)}
-                    type="button"
-                  >
-                    {copy.details}
-                    <ArrowIcon />
-                  </button>
-                </div>
+            <aside className="mt-10 rounded-xl border border-blue-100 bg-blue-50 p-4 sm:p-5">
+              <div className="flex items-start gap-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                <svg className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                </svg>
+                <p>
+                  {copy.note}
+                </p>
               </div>
-            </article>
-          ))}
-        </div>
-
-        <aside className="mt-10 rounded-xl border border-blue-100 bg-blue-50 p-4 sm:p-5">
-          <div className="flex items-start gap-3 text-xs leading-relaxed text-slate-600 sm:text-sm">
-            <svg className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-            </svg>
-            <p>
-              {copy.note}
-            </p>
-          </div>
-        </aside>
+            </aside>
+          </>
+        )}
       </main>
     </div>
   );
