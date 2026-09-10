@@ -89,14 +89,17 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
       setLoading(true);
       setApiError('');
 
-      try {
-        const response = await fetch('https://yojanax.onrender.com/recommendations', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(
-            {
+      const maxAttempts = 3;
+      const retryDelay = 1500;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        try {
+          const response = await fetch('https://yojanax.onrender.com/recommendations', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
               purpose: answers.supportType,
 
               is_sc: answers.formData.is_sc
@@ -151,24 +154,37 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
                   : answers.formData.institution_recognized === 'No'
                     ? false
                     : undefined,
-            })
+            }),
+          });
 
-        });
+          // Retry temporary server errors, but don't retry normal validation errors.
+          if (!response.ok) {
+            if (response.status >= 500 && attempt < maxAttempts) {
+              await new Promise((resolve) => setTimeout(resolve, retryDelay));
+              continue;
+            }
 
-        if (!response.ok) {
-          throw new Error(`API error: ${response.status}`);
+            throw new Error(`API error: ${response.status}`);
+          }
+
+          const data = await response.json();
+          setSchemes(data.recommendations || []);
+          setApiError('');
+          return;
+        } catch (error) {
+          console.error(`Recommendation API attempt ${attempt} failed:`, error);
+
+          if (attempt < maxAttempts) {
+            await new Promise((resolve) => setTimeout(resolve, retryDelay));
+            continue;
+          }
+
+          setApiError('Unable to load recommendations. Please try again.');
         }
-
-        const data = await response.json();
-        setSchemes(data.recommendations || []);
-      } catch (error) {
-        console.error('Recommendation API error:', error);
-        setApiError('Unable to load recommendations. Please try again.');
-      } finally {
-        setLoading(false);
       }
-    };
 
+      setLoading(false);
+    };
     fetchRecommendations();
   }, [answers]);
 
@@ -225,8 +241,8 @@ const Recommendations = ({ answers, onBack, onViewDetails, language = 'English' 
                       </span>
                     </div>
                     <h2 className="text-xl font-bold text-navy-900 sm:text-2xl">{scheme.scheme_id === 'ELS'
-  ? 'PM-Vidyalaxmi'
-  : scheme.scheme_name}</h2>
+                      ? 'PM-Vidyalaxmi'
+                      : scheme.scheme_name}</h2>
                     <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">{scheme.description}</p>
                   </div>
                   <span className="hidden h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-lg font-bold text-saffron-600 sm:flex" aria-hidden="true">

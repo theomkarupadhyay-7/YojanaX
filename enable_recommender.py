@@ -63,7 +63,7 @@ def main():
 
     print("Recommendation router enabled successfully.")
     print("Endpoint: POST /recommendations")
-    print("Swagger: http://127.0.0.1:8000/docs")
+    print("Swagger: https://yojanax.onrender.com/docs")
 
 
 if __name__ == "__main__":
