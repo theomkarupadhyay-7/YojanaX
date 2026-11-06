@@ -110,7 +110,7 @@ yojanax/
 
 Eligibility text in the scheme dataset is preserved exactly as extracted from official scheme sources — nothing is inferred or invented. Where a scheme's source material didn't state a concrete eligibility condition, that is marked explicitly (e.g. *"not specified in source"*) rather than filled in with an assumption. Users should always verify current eligibility and terms with the official scheme source or Channel Partner before applying.
 
-
+A hackathon project **NOT A SOLO PROJECT**
 
 ## Team
 
